@@ -42,16 +42,6 @@ buttonDetail2.addEventListener("click", () => {
   
 });
 
-// buttonDetail1.addEventListener("click", () => {
-  
-//   if (deskripsi1.style.height === "50px" || deskripsi1.style.height === "") {
-//       deskripsi1.style.height = "auto"; 
-//       buttonDetail1.textContent = "Read Less"; 
-//   } else {
-//       deskripsi1.style.height = "50px"; 
-//       buttonDetail1.textContent = "Read More"; 
-//   }
-// });
 
 
 
@@ -86,4 +76,99 @@ function moveCarousel() {
 
 // Mulai pergerakan carousel
 moveCarousel();
+
+
+const carousel2 = document.querySelector('.carousel2');
+const cards2 = document.querySelectorAll('.card2');
+const cardWidth2 = cards2[0].offsetWidth + 5;
+let currentPosition2 = 0;
+
+
+
+function moveCarousel2() {
+  currentPosition2 -= 0.5; // Geser carousel ke kiri sedikit demi sedikit
+  carousel2.style.transform = `translateX(${currentPosition2}px)`;
+
+  
+  if (Math.abs(currentPosition2) >= cardWidth2) {
+    carousel2.appendChild(carousel2.firstElementChild);
+    carousel2.style.transition = 'none';
+    currentPosition2 += cardWidth2; 
+    carousel2.style.transform = `translateX(${currentPosition2}px)`;
+  }
+  setTimeout(() => {
+    carousel2.style.transition = 'transform   ease-in'; 
+  }, 0);
+  
+  requestAnimationFrame(moveCarousel2);
+
+  
+}
+
+// Mulai pergerakan carousel
+moveCarousel2();
+
+
+
+// const carousel3 = document.querySelector('.carousel3');
+// const cards3 = document.querySelectorAll('.card3');
+// const cardWidth3 = cards3[0].offsetWidth + 5;
+// let currentPosition3 = 0;
+
+// function moveCarousel3() {
+//   currentPosition3 -= 0.5; // Geser carousel ke kiri sedikit demi sedikit
+//   carousel3.style.transform = `translateX(${currentPosition3}px)`;
+
+  
+//   // if (Math.abs(currentPosition3) >= cardWidth3) {
+//   //   carousel3.appendChild(carousel3.firstElementChild);
+//   //   carousel3.style.transition = 'none';
+//   //   currentPosition3 += cardWidth3; 
+//   //   carousel3.style.transform = `translateX(${currentPosition3}px)`;
+//   // }
+
+//   if (currentPosition3 >= cardWidth3) {
+//     // Pindahkan elemen terakhir ke depan
+//     carousel3.insertBefore(carousel3.lastElementChild, carousel3.firstElementChild);
+//     carousel3.style.transition = 'none';
+//     currentPosition3 -= cardWidth3; // Sesuaikan posisi setelah elemen dipindahkan
+//     carousel3.style.transform = `translateX(${currentPosition3}px)`;
+//   }
+//   setTimeout(() => {
+//     carousel3.style.transition = 'transform   ease-in'; 
+//   }, 0);
+  
+//   requestAnimationFrame(moveCarousel3);
+
+  
+// }
+
+const carousel3 = document.querySelector('.carousel3');
+const cards3 = document.querySelectorAll('.card3');
+const cardWidth3 = cards3[0].offsetWidth + 5; // Lebar kartu termasuk margin/padding
+let currentPosition3 = 0;
+
+function moveCarousel3() {
+  currentPosition3 += 0.5; // Geser carousel ke kanan sedikit demi sedikit
+  carousel3.style.transform = `translateX(${currentPosition3}px)`;
+
+  // Jika sudah bergeser melebihi lebar satu kartu, pindahkan elemen pertama ke akhir
+  if (currentPosition3 >= cardWidth3) {
+    carousel3.style.transition = 'none'; // Nonaktifkan animasi sementara
+    currentPosition3 -= cardWidth3; // Kurangi posisi untuk reset
+    carousel3.style.transform = `translateX(${currentPosition3}px)`;
+    carousel3.insertBefore(carousel3.lastElementChild, carousel3.firstElementChild); // Pindahkan elemen terakhir ke awal
+  }
+
+  setTimeout(() => {
+    carousel3.style.transition = 'transform ease-in'; 
+  }, 0);
+
+  requestAnimationFrame(moveCarousel3); // Panggil ulang untuk animasi terus-menerus
+}
+
+// Mulai pergerakan carousel
+moveCarousel3();
+
+
 
