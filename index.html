@@ -1,0 +1,375 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    },
+
+                    animation: {
+                        slowBounce: 'bounce2 3s infinite',
+                    },
+
+                    keyframes: {
+                        bounce2: {
+                            '0%, 100%': {
+                                transform: 'translateY(-10%)',
+                                animationTimingFunction: 'cubic-bezier(0.8, 0, 1, 1)',
+                            },
+                            '50%': {
+                                transform: 'translateY(0)',
+                                animationTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)',
+                            },
+                        },
+                    }
+
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="w-full h-screen bg-[#0D1117] overflow-hidden">
+
+        <div
+            class="link z-10 fixed top-0 left-0 right-0 bg-[#0D1117] h-11 flex px-3 py-2 text-white flex border-b border-[#00E6F6]">
+
+            <h1 class="w-[50%] ml-20 text-[22px]">Portofolio</h1>
+
+            <div class="flex justify-center w-[50%]">
+                <div class="flex w-[80%] justify-between">
+                    <a href="" class="hover:text-[#00E6F6]">Home</a>
+                    <a href="#about" class="hover:text-[#00E6F6]">About</a>
+                    <a href="" class="hover:text-[#00E6F6]">Portofolio</a>
+                    <a href="" class="hover:text-[#00E6F6]">Contact</a>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="flex w-full mt-28 px-11">
+            <div class="w-[50%] mr-1 h-screen px-11 py-11">
+                <div class="main w-full mt-11">
+                    <h2 class="text-white text-[40px]">Hello, It's Me</h2>
+                    <h1 class="text-white text-[58px]">Muhamad Arif</h1>
+                    <h2 class="text-white text-[40px] inline mr-3">And, I'am a</h2><span id="typing"
+                        class="text-[32px] text-[#00E6F6]"></span>
+                </div>
+                <p class="text-white">I’m a passionate junior developer eager to learn and grow in the tech industry. I enjoy solving problems, building websites, and exploring new technologies to improve my skills every day.</p>
+
+                <div class="flex w-full mt-5">
+                    <div class="w-[60px] h-[60px] rounded-full border-2 border-[#00E6F6] mr-4 cursor-pointer">
+                        <i class="fa-brands fa-linkedin-in text-[#00E6F6] ml-4 mt-4 text-[24px]"></i>
+                    </div>
+                    <div class="w-[60px] h-[60px] rounded-full border-2 border-[#00E6F6] mr-4 cursor-pointer">
+                        <i class="fa-brands fa-instagram text-[#00E6F6] ml-4 mt-4 text-[24px]"></i>
+                    </div>
+                    <div class="w-[60px] h-[60px] rounded-full border-2 border-[#00E6F6] cursor-pointer">
+                        <i class="fa-brands fa-whatsapp text-[#00E6F6] ml-4 mt-4 text-[24px]"></i>
+                    </div>
+                </div>
+
+                <button
+                    class="mt-5 text-white bg-[#00E6F6] w-[170px] px-3 h-[50px] rounded-2xl shadow-lg shadow-[#00E6F6] font-bold">Download
+                    CV</button>
+
+            </div>
+
+            <div class="w-[50%] h-screen px-11 py-11">
+                <div
+                    class="hexagon bg-[#00E6F6] mt-11 mx-auto outline outline-offset-4 border-4 border-[#00E6F6] outline-[#00E6F6] animate-slowBounce ">
+                    <img src="assets/me.jpeg" alt="Profile">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="about" class="w-full h-[480px] bg-[#0D1117] border-t border-[#00E6F6] py-3 overflow-hidden">
+        <p class="text-center text-[#00E6F6] text-[30px] mt-6">About Me</p>
+
+        <div class="w-full flex h-full">
+
+            <div class="w-[50%]">
+                <div
+                    class="hexagon-2 bg-[#00E6F6]  mx-auto outline outline-offset-4 border-4 border-[#00E6F6] outline-[#00E6F6]  ">
+                    <img src="assets/me.jpeg" alt="Profile">
+                </div>
+            </div>
+
+            <div class="w-[50%] px-5">
+                <p class="mt-8 text-white text-[18px]">Hello! My name is Muhamad Arif, and I am currently in my final year of university. 
+                    I am passionate about technology, particularly web development, and have been honing my skills in 
+                    building dynamic and responsive websites. As a student, I enjoy exploring new technologies, solving 
+                    real-world problems, and working on projects that allow me to grow both personally and professionally. 
+                    I believe in continuous learning and look forward to contributing my skills and creativity to exciting 
+                    projects.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="skill" class="w-full h-[680px] bg-[#0D1117] border-t border-[#00E6F6] py-3 overflow-hidden relative">
+        <p class="text-center text-[#00E6F6] text-[30px] mt-6">My Skill</p>
+        <!-- row pertama -->
+        <div class="carousel justify-between flex w-screen h-[140px] mt-14 px-4 overflow-x-hidden">
+
+            <div class="card w-[300px] h-[120px] rounded-xl bg-[#00E6F6] flex  shadow-lg shadow-[#00E6F6] mr-3">
+                <div class="w-[50%]">
+                    <img src="assets/html.png" alt="" class="w-[90px] h-[90px] mt-3">
+                </div>
+                <div class="w-[50%]">
+                    <h1 class="text-white font-bold text-center text-[35px] mt-4">HTML</h1>
+                    <p class="text-white font-semi-bold text-[10px]">Hypertext Markup Language</p>
+                </div>
+            </div>
+
+            <div class="card w-[300px] h-[120px] rounded-xl bg-[#00E6F6] flex shadow-lg shadow-[#00E6F6] mr-3">
+                <div class="w-[50%] pl-3">
+                    <img src="assets/css.png" alt="" class="w-[90px] h-[90px] mt-3">
+                </div>
+                <div class="w-[50%]">
+                    <h1 class="text-white font-bold text-center text-[35px] mt-4">CSS</h1>
+                    <p class="text-white font-semi-bold text-center text-[10px]">Cascading Style Sheets</p>
+                </div>
+            </div>
+
+            <div class="card w-[300px] h-[120px] rounded-xl bg-[#00E6F6] flex shadow-lg shadow-[#00E6F6] mr-3">
+                <div class="w-[50%] pl-3">
+                    <img src="assets/js.png" alt="" class="w-[90px] h-[90px] mt-3">
+                </div>
+                <div class="w-[50%]">
+                    <h1 class="text-white font-bold text-center text-[35px] mt-4">JS</h1>
+                    <p class="text-white font-semi-bold text-center text-[10px]">JavaScript</p>
+                </div>
+            </div>
+
+            <div class="card w-[300px] h-[120px] rounded-xl bg-[#00E6F6] flex shadow-lg shadow-[#00E6F6] mr-3">
+                <div class="w-[50%] pl-3">
+                    <img src="assets/tailwind.png" alt="" class="w-[90px] h-[90px] mt-3">
+                </div>
+                <div class="w-[50%]">
+                    <h1 class="text-white font-bold  text-[30px] mt-4">TAILWIND</h1>
+                    <p class="text-white font-semi-bold text-[10px]">CSS Framework</p>
+                </div>
+            </div>
+
+        </div>
+        <!-- batas row petama -->
+
+        <!-- row kedua -->
+        <div class="flex justify-between w-full h-[140px] mt-8 px-4 overflow-x-hidden">
+
+            <div class=" w-[300px] h-[120px] rounded-xl bg-[#00E6F6] flex shadow-lg shadow-[#00E6F6] mr-3">
+                <div class="w-[50%]">
+                    <img src="assets/mysql.png" alt="" class="w-[90px] h-[90px] mt-3">
+                </div>
+                <div class="w-[50%]">
+                    <h1 class="text-white font-bold text-center text-[35px] mt-4">MYSQL</h1>
+                    <p class="text-white font-semi-bold text-[10px] text-center">Database Relation</p>
+                </div>
+            </div>
+
+            <div class=" w-[300px] h-[120px] rounded-xl bg-[#00E6F6] flex shadow-lg shadow-[#00E6F6] mr-3">
+                <div class="w-[50%] pl-3">
+                    <img src="assets/mongo.png" alt="" class="w-[90px] h-[90px] mt-3">
+                </div>
+                <div class="w-[50%]">
+                    <h1 class="text-white font-bold  text-[25px] mt-4">MONGODB</h1>
+                    <p class="text-white font-semi-bold text-center text-[10px]">Database Not Relation</p>
+                </div>
+            </div>
+
+            <div class=" w-[300px] h-[120px] rounded-xl bg-[#00E6F6] flex shadow-lg shadow-[#00E6F6] mr-3">
+                <div class="w-[50%] pl-3">
+                    <img src="assets/php.png" alt="" class="w-[90px] h-[90px] mt-3">
+                </div>
+                <div class="w-[50%]">
+                    <h1 class="text-white font-bold text-center text-[35px] mt-4">PHP</h1>
+                    <p class="text-white font-semi-bold text-[10px] text-center">Programing Language</p>
+                </div>
+            </div>
+
+            <div class=" w-[300px] h-[120px] rounded-xl bg-[#00E6F6] flex shadow-lg shadow-[#00E6F6] mr-3">
+                <div class="w-[50%] pl-3">
+                    <img src="assets/java.png" alt="" class="w-[90px] h-[90px] mt-3">
+                </div>
+                <div class="w-[50%]">
+                    <h1 class="text-white font-bold text-center  text-[30px] mt-4">JAVA</h1>
+                    <p class="text-white font-semi-bold text-[10px] text-center">Programing Language</p>
+                </div>
+            </div>
+
+        </div>
+        <!-- batas row kedua -->
+
+        <!-- row ketiga -->
+        <div class="animate-carousel flex justify-between w-full h-[140px] mt-8 px-4 overflow-x-hidden">
+
+            <div class="card w-[300px] h-[120px] rounded-xl bg-[#00E6F6] flex shadow-lg shadow-[#00E6F6] mr-3">
+                <div class="w-[50%]">
+                    <img src="assets/nodejs.png" alt="" class="w-[90px] h-[90px] mt-3">
+                </div>
+                <div class="w-[50%]">
+                    <h1 class="text-white font-bold text-center text-[35px] mt-4">MYSQL</h1>
+                    <p class="text-white font-semi-bold text-[10px] text-center">Database Relation</p>
+                </div>
+            </div>
+
+            <div class="card w-[300px] h-[120px] rounded-xl bg-[#00E6F6] flex shadow-lg shadow-[#00E6F6] mr-3">
+                <div class="w-[50%] pl-3">
+                    <img src="assets/laravel.png" alt="" class="w-[90px] h-[90px] mt-3">
+                </div>
+                <div class="w-[50%]">
+                    <h1 class="text-white font-bold text-center  text-[25px] mt-4">Laravel</h1>
+                    <p class="text-white font-semi-bold text-center text-[10px]">PHP Framework</p>
+                </div>
+            </div>
+
+            <div class="card w-[300px] h-[120px] rounded-xl bg-[#00E6F6] flex shadow-lg shadow-[#00E6F6] mr-3">
+                <div class="w-[50%] pl-3">
+                    <img src="assets/vue.png" alt="" class="w-[90px] h-[90px] mt-3">
+                </div>
+                <div class="w-[50%]">
+                    <h1 class="text-white font-bold text-center text-[35px] mt-4">VUE</h1>
+                    <p class="text-white font-semi-bold text-[10px] text-center">JavaScript Framework</p>
+                </div>
+            </div>
+
+            <div class="card w-[300px] h-[120px] rounded-xl bg-[#00E6F6] flex shadow-lg shadow-[#00E6F6] mr-3">
+                <div class="w-[50%] pl-3">
+                    <img src="assets/codeIgnator.png" alt="" class="w-[90px] h-[90px] mt-3">
+                </div>
+                <div class="w-[50%]">
+                    <h1 class="text-white font-bold text-[20px] mt-4">CodeIgnitor3</h1>
+                    <p class="text-white font-semi-bold text-[10px] text-center">PHP Framework</p>
+                </div>
+            </div>
+
+        </div>
+        <!-- batas row ketiga -->
+    </div>
+
+    <div id="skill" class="w-full  h-[620px] bg-[#0D1117] border-t border-[#00E6F6] py-3 px-3 overflow-x-hidden">
+        <p class="text-center text-[#00E6F6] text-[30px] mt-6">I can do</p>
+
+        <div class="flex flex-wrap justify-between w-full">
+            <div class="w-[32%] h-[480px]  bg-[#1E1E1E] rounded-xl my-auto mr-3 mt-3 overflow-hidden">
+                <div class="w-full h-[80px] bg-[#00E6F6] py-4">
+                    <p class="text-white text-[24px] text-center font-bold">Frontend Web</p>
+                </div>
+
+                <p class="text-white px-5 py-3 text-[19px]"> 
+                    I have experience in creating visually appealing and user-friendly interfaces for websites. My skills include using modern tools and technologies to craft responsive designs that provide seamless user experiences. I pay attention to details and ensure the design aligns with user requirements and branding guidelines.
+                </p>
+
+            </div>
+
+            <div class="w-[32%] h-[480px] bg-[#1E1E1E] rounded-xl my-auto mr-3 mt-3 overflow-hidden">
+                <div class="w-full h-[80px] bg-[#00E6F6] py-4">
+                    <p class="text-white text-[24px] text-center font-bold">Web Development</p>
+                </div>
+                <p class="text-white px-5 py-3 text-[19px]"> I specialize in developing dynamic and functional websites. My work focuses on building robust and scalable web applications that meet diverse business needs. From integrating APIs to optimizing site performance, I ensure the final product is efficient and reliable
+                </p>
+            </div>
+
+            <div class="w-[32%] h-[480px] bg-[#1E1E1E] rounded-xl my-auto mr-3 mt-3 overflow-hidden">
+                <div class="w-full h-[80px] bg-[#00E6F6] py-4">
+                    <p class="text-white text-[24px] text-center font-bold">Backend</p>
+                </div>
+                <p class="text-white px-2 py-3 text-[19px]"> Focusing on creating server-side logic and managing databases. My skills include building secure, efficient, and scalable systems that support the functionality of web applications. I ensure data integrity and seamless communication between the server and client
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="portofolio" class="w-full h-[880px] bg-[#0D1117] border-t border-[#00E6F6] py-3 overflow-x-hidden">
+        <p class="text-center text-[#00E6F6] text-[30px] mt-6">Portofolio</p>
+
+        <div class="w-[90%] flex justify-center px-3 mt-5 mx-auto">
+
+            <div class="w-[400px] h-[550px] bg-[#1E1E1E] rounded-xl px-5 py-5  mr-5">
+                <img src="assets/panser/pesanan.png" alt="" class="rounded-xl">
+                
+                <h1 class="font-bold text-[#00E6F6] mt-6 text-[20px]">Mobile E-commerce Management</h1>
+
+                <div class="w-full px-3 h-[100px] overflow-scroll">
+                    <p class="text-white">I developed a comprehensive admin panel for a mobile e-commerce application to streamline backend operations. This system enables administrators to efficiently manage products, orders, categories, drivers, and shipping rates. Key features include adding, editing, and deleting products, categories, and drivers; processing and confirming customer orders; and managing delivery tariffs. The panel was built with Vue.js and integrated with a RESTful API for seamless communication with the backend. This project highlights my ability to design and implement scalable, user-friendly admin solutions for e-commerce platforms.</p>
+                </div>
+
+                <button class="shadow-lg shadow-[#00E6F6] hover:bg-[#00E6F6] hover:text-white font-bold w-[300px] h-[50px] px-5 rounded-xl ml-[30px] border-2 border-[#00E6F6] text-[#00E6F6] mt-7">View Detail</button>
+
+            </div>
+
+            <div class="w-[400px] h-[550px] bg-[#1E1E1E] px-5 py-5 rounded-xl ">
+                <img src="assets/barang/barang.png" alt="" class="rounded-xl h-[260px]">
+                
+                <h1 class="font-bold text-[#00E6F6] mt-6 text-[20px]">Iventory</h1>
+
+                <div class="w-full px-3 h-[100px] overflow-scroll">
+                    <p class="text-white">I created an inventory management system that simplifies the tracking of product stock and outgoing items. The system allows administrators to efficiently add, update, and delete products, as well as monitor product outflows. It also includes a comprehensive reporting feature to generate detailed reports on outgoing items, providing insights into inventory usage and trends. This project showcases my expertise in developing systems for inventory tracking and reporting, ensuring streamlined operations and accurate data management.</p>
+                </div>
+
+                <button id="show2" class="shadow-lg shadow-[#00E6F6] hover:bg-[#00E6F6] hover:text-white font-bold w-[300px] h-[50px] px-5 rounded-xl ml-[30px] border-2 border-[#00E6F6] text-[#00E6F6] mt-7">View Detail</button>
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <div id="contact" class="flex w-full h-[180px] bg-[#0D1117] border-t border-[#00E6F6] py-3 overflow-x-hidden">
+
+        <div class="w-[4%] flex-col justify-end px-5">
+            <div class="w-[40px] h-[40px] rounded-full border-2 border-[#00E6F6] mr-4 cursor-pointer mb-2">
+                <i class="fa-brands fa-linkedin-in text-[#00E6F6] ml-[10px] mt-[10px] text-[18px]"></i>
+            </div>
+            <div class="w-[40px] h-[40px] rounded-full border-2 border-[#00E6F6] mr-4 cursor-pointer mb-2">
+                <i class="fa-brands fa-instagram text-[#00E6F6] ml-[10px] mt-[10px] text-[18px]"></i>
+            </div>
+            <div class="w-[40px] h-[40px] rounded-full border-2 border-[#00E6F6] cursor-pointer">
+                <i class="fa-brands fa-whatsapp text-[#00E6F6] ml-[10px] mt-[10px] text-[18px]"></i>
+            </div>
+        </div>
+
+        <div class="w-[40%] flex-col justify-end px-5">
+            <p class="text-[#00E6F6] text-[20px] font-semi-bold">Muhamad Arif</p>
+            <p class="text-[#00E6F6] text-[20px] font-semi-bold mt-5">a_riifff</p>
+            <p class="text-[#00E6F6] text-[20px] font-semi-bold mt-5">+62 878-8078-5245</p>
+        </div>
+
+        <div class="w-[34%] my-auto">
+            <p class="text-[#00E6F6] text-[18px] font-semi-bold">Copyright &#169; 2024 Muhamad Arif</p>
+           
+            
+        </div>
+
+        <div class="w-20%">
+            <p class="text-[#00E6F6] text-[20px] font-bold">Muhamad Arif</p>
+            <i class="fa-solid fa-location-dot text-[#00E6F6] mt-6"></i><span class="text-[#00E6F6] ml-3">Tangerang City, Indonesian</span>
+            <p class="text-[#00E6F6] text-[20px] font-thin mt-5">Muhmdarif3@gmail.com</p>
+        </div>
+        
+
+    </div>
+
+
+    <script src="js/main.js"></script>
+</body>
+
+
+</html>
