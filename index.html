@@ -4,6 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Signika:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
         integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
@@ -12,7 +16,18 @@
     <script>
         tailwind.config = {
             theme: {
+
+                screens: {
+                    sm: '640px',
+                    md: '768px',
+                    lg: '1024px',
+                    xl: '1280px',
+                },
+
                 extend: {
+                    fontFamily :{
+                        roboto : ['Roboto', 'sans-serif']
+                    },
                     colors: {
                         clifford: '#da373d',
                     },
@@ -42,56 +57,60 @@
 
 <body>
 
-    <div class="w-full h-screen bg-[#0D1117] overflow-hidden">
+    <div class="link z-10 fixed top-0 left-0 right-0 bg-[#0D1117] h-11 flex px-3 py-2 text-white flex border-b border-[#00E6F6]">
 
-        <div
-            class="link z-10 fixed top-0 left-0 right-0 bg-[#0D1117] h-11 flex px-3 py-2 text-white flex border-b border-[#00E6F6]">
+        <button id="menu-toggle" class="lg:hidden md:hidden text-white text-2xl">
+            <i class="fas fa-bars"></i>
+        </button>
 
-            <h1 class="w-[50%] ml-20 text-[22px]">Portofolio</h1>
+        <h1 class="w-[50%] ml-20 text-[22px] font-roboto font-bold ">Portofolio</h1>
 
-            <div class="flex justify-center w-[50%]">
-                <div class="flex w-[80%] justify-between">
-                    <a href="" class="hover:text-[#00E6F6]">Home</a>
-                    <a href="#about" class="hover:text-[#00E6F6]">About</a>
-                    <a href="" class="hover:text-[#00E6F6]">Portofolio</a>
-                    <a href="" class="hover:text-[#00E6F6]">Contact</a>
-                </div>
+        <!-- Hamburger Button -->
+       
+
+        <div class="flex justify-center w-[50%]">
+            <div id="menu" class="flex w-[80%] justify-between">
+                <a href="" class="hover:text-[#00E6F6] font-roboto">Home</a>
+                <a href="#about" class="hover:text-[#00E6F6] font-roboto">About</a>
+                <a href="#portfolio" class="hover:text-[#00E6F6] font-roboto">Portofolio</a>
+                <a href="#contact" class="hover:text-[#00E6F6] font-roboto ">Contact</a>
             </div>
-
         </div>
 
+    </div>
 
-        <div class="flex w-full mt-28 px-11">
-            <div class="w-[50%] mr-1 h-screen px-11 py-11">
+    <div class="w-full h-screen bg-[#0D1117] overflow-hidden">
+        <div class="lg:flex lg:flex-row md:flex-col w-full lg:mt-28 md:mt-20 px-11">
+            <div class="lg:w-[50%] md:w-[100%] mr-1 lg:h-screen md:h-[50%] md:px-11 lg:px-11 py-11 ">
                 <div class="main w-full mt-11">
-                    <h2 class="text-white text-[40px]">Hello, It's Me</h2>
-                    <h1 class="text-white text-[58px]">Muhamad Arif</h1>
-                    <h2 class="text-white text-[40px] inline mr-3">And, I'am a</h2><span id="typing"
-                        class="text-[32px] text-[#00E6F6]"></span>
+                    <h2 class="text-white lg:text-[40px] md:text-[30px] sm:text-[20px] font-roboto">Hello, It's Me</h2>
+                    <h1 class="text-white lg:text-[58px] md:text-[40px] sm:text-[12px] font-roboto font-semibold">Muhamad Arif</h1>
+                    <h2 class="text-white lg:text-[32px] md:text-[28px] inline lg:mr-3 font-roboto">And, I'am a </h2><span id="typing"
+                        class="lg:text-[32px] md:text-[28px] font-roboto font-bold text-[#00E6F6]"></span>
                 </div>
-                <p class="text-white">I’m a passionate junior developer eager to learn and grow in the tech industry. I enjoy solving problems, building websites, and exploring new technologies to improve my skills every day.</p>
+                <p class="text-white font-roboto font-normal">I’m a passionate junior developer eager to learn and grow in the tech industry. I enjoy solving problems, building websites, and exploring new technologies to improve my skills every day.</p>
 
                 <div class="flex w-full mt-5">
-                    <div class="w-[60px] h-[60px] rounded-full border-2 border-[#00E6F6] mr-4 cursor-pointer">
-                        <i class="fa-brands fa-linkedin-in text-[#00E6F6] ml-4 mt-4 text-[24px]"></i>
+                    <div class="w-[60px] h-[60px]  rounded-full border-2 border-[#00E6F6] mr-4 cursor-pointer">
+                        <i class="fa-brands fa-linkedin-in text-[#00E6F6] md:text-[20px] md:ml-[18px] md:mt-4 lg:ml-4 lg:mt-4 lg:text-[24px]"></i>
                     </div>
                     <div class="w-[60px] h-[60px] rounded-full border-2 border-[#00E6F6] mr-4 cursor-pointer">
-                        <i class="fa-brands fa-instagram text-[#00E6F6] ml-4 mt-4 text-[24px]"></i>
+                        <i class="fa-brands fa-instagram text-[#00E6F6] lg:ml-4 lg:mt-4 lg:text-[24px] md:text-[20px] md:ml-[18px] md:mt-4"></i>
                     </div>
                     <div class="w-[60px] h-[60px] rounded-full border-2 border-[#00E6F6] cursor-pointer">
-                        <i class="fa-brands fa-whatsapp text-[#00E6F6] ml-4 mt-4 text-[24px]"></i>
+                        <i class="fa-brands fa-whatsapp text-[#00E6F6] lg:ml-4 lg:mt-4 lg:text-[24px] md:text-[20px] md:ml-[18px] md:mt-4"></i>
                     </div>
                 </div>
 
                 <button
-                    class="mt-5 text-white bg-[#00E6F6] w-[170px] px-3 h-[50px] rounded-2xl shadow-lg shadow-[#00E6F6] font-bold">Download
+                    class="mt-5 text-white bg-[#00E6F6] lg:w-[170px] md:w-[200px] px-3 h-[50px] rounded-2xl shadow-lg shadow-[#00E6F6] font-bold">Download
                     CV</button>
 
             </div>
 
-            <div class="w-[50%] h-screen px-11 py-11">
+            <div class="lg:w-[50%] md:w-[100%] lg:h-screen md:h-[50%] lg:px-11 lg:py-11">
                 <div
-                    class="hexagon bg-[#00E6F6] mt-11 mx-auto outline outline-offset-4 border-4 border-[#00E6F6] outline-[#00E6F6] animate-slowBounce ">
+                    class="hexagon md:w-[400px] md:h-[430px] lg:w-[400px] lg:h-[430px] bg-[#00E6F6] lg:mt-11 mx-auto outline outline-offset-4 border-4 border-[#00E6F6] outline-[#00E6F6] animate-slowBounce ">
                     <img src="assets/me.jpeg" alt="Profile">
                 </div>
             </div>
@@ -99,19 +118,19 @@
     </div>
 
     <div id="about" class="w-full h-[480px] bg-[#0D1117] border-t border-[#00E6F6] py-3 overflow-hidden">
-        <p class="text-center text-[#00E6F6] text-[30px] mt-6">About Me</p>
+        <p class="text-center text-[#00E6F6] lg:text-[30px] md:text-[24px] mt-6 font-bold font-roboto">About Me</p>
 
         <div class="w-full flex h-full">
 
             <div class="w-[50%]">
                 <div
-                    class="hexagon-2 bg-[#00E6F6]  mx-auto outline outline-offset-4 border-4 border-[#00E6F6] outline-[#00E6F6]  ">
+                    class="hexagon-2 md:w-[300px] md:h-[330px] lg:w-[300px] lg:h-[330px] bg-[#00E6F6]  mx-auto outline outline-offset-4 border-4 border-[#00E6F6] outline-[#00E6F6]  ">
                     <img src="assets/me.jpeg" alt="Profile">
                 </div>
             </div>
 
             <div class="w-[50%] px-5">
-                <p class="mt-8 text-white text-[18px]">Hello! My name is Muhamad Arif, and I am currently in my final year of university. 
+                <p class="mt-8 text-white lg:text-[18px] md:text-[16px] font-roboto font-normal">Hello! My name is Muhamad Arif, and I am currently in my final year of university. 
                     I am passionate about technology, particularly web development, and have been honing my skills in 
                     building dynamic and responsive websites. As a student, I enjoy exploring new technologies, solving 
                     real-world problems, and working on projects that allow me to grow both personally and professionally. 
@@ -122,140 +141,143 @@
         </div>
     </div>
 
-    <div id="skill" class="w-full h-[680px] bg-[#0D1117] border-t border-[#00E6F6] py-3 overflow-hidden relative">
-        <p class="text-center text-[#00E6F6] text-[30px] mt-6">My Skill</p>
+    <div id="skill" class="w-full lg:h-[680px] bg-[#0D1117] border-t border-[#00E6F6] py-3 overflow-hidden relative">
+        <p class="text-center text-[#00E6F6] lg:text-[30px] md:text-[24px] mt-6 font-roboto font-bold">My Skill</p>
         <!-- row pertama -->
-        <div class="carousel justify-between flex w-screen h-[140px] mt-14 px-4 overflow-x-hidden">
+        
+        <div  class="carousel justify-between flex w-screen md:h-[140px] lg:h-[140px] mt-14 px-4 overflow-x-hidden">
 
-            <div class="card w-[300px] h-[120px] rounded-xl bg-[#00E6F6] flex  shadow-lg shadow-[#00E6F6] mr-3">
-                <div class="w-[50%]">
-                    <img src="assets/html.png" alt="" class="w-[90px] h-[90px] mt-3">
+            <div class="card lg:w-[300px] md:w-[250px] md:h-[100px] lg:h-[120px] rounded-xl bg-[#00E6F6] flex  shadow-lg shadow-[#00E6F6] mr-3">
+                <div class="lg:w-[50%] md:w-[40%]">
+                    <img src="assets/html.png" alt="" class="lg:w-[90px] lg:h-[90px] md:w-[70px] md:h-[70px] mt-3">
                 </div>
                 <div class="w-[50%]">
-                    <h1 class="text-white font-bold text-center text-[35px] mt-4">HTML</h1>
-                    <p class="text-white font-semi-bold text-[10px]">Hypertext Markup Language</p>
+                    <h1 class="text-white font-bold lg:text-center lg:text-[35px] md:text-[20px] mt-4">HTML</h1>
+                    <p class="text-white font-semi-bold lg:text-[10px] md:text-[11px]">Hypertext Markup Language</p>
                 </div>
             </div>
 
-            <div class="card w-[300px] h-[120px] rounded-xl bg-[#00E6F6] flex shadow-lg shadow-[#00E6F6] mr-3">
-                <div class="w-[50%] pl-3">
-                    <img src="assets/css.png" alt="" class="w-[90px] h-[90px] mt-3">
+            <div class="card lg:w-[300px] md:w-[250px] md:h-[100px] lg:h-[120px] rounded-xl bg-[#00E6F6] flex shadow-lg shadow-[#00E6F6] mr-3">
+                <div class="lg:w-[50%] md:w-[45%] pl-3">
+                    <img src="assets/css.png" alt="" class="lg:w-[90px] lg:h-[90px] md:w-[60px] md:h-[70px] mt-3">
                 </div>
                 <div class="w-[50%]">
-                    <h1 class="text-white font-bold text-center text-[35px] mt-4">CSS</h1>
-                    <p class="text-white font-semi-bold text-center text-[10px]">Cascading Style Sheets</p>
+                    <h1 class="text-white font-bold lg:text-center lg:text-[35px] md:text-[20px] mt-4">CSS</h1>
+                    <p class="text-white font-semi-bold lg:text-center lg:text-[10px] md:text-[11px]">Cascading Style Sheets</p>
                 </div>
             </div>
 
-            <div class="card w-[300px] h-[120px] rounded-xl bg-[#00E6F6] flex shadow-lg shadow-[#00E6F6] mr-3">
+            <div class="card lg:w-[300px] lg:h-[120px] md:w-[250px] md:h-[100px] rounded-xl bg-[#00E6F6] flex shadow-lg shadow-[#00E6F6] mr-3">
                 <div class="w-[50%] pl-3">
-                    <img src="assets/js.png" alt="" class="w-[90px] h-[90px] mt-3">
+                    <img src="assets/js.png" alt="" class="lg:w-[90px] lg:h-[90px] mt-3 md:w-[70px] md:h-[70px] rounded-xl">
                 </div>
                 <div class="w-[50%]">
-                    <h1 class="text-white font-bold text-center text-[35px] mt-4">JS</h1>
-                    <p class="text-white font-semi-bold text-center text-[10px]">JavaScript</p>
+                    <h1 class="text-white font-bold text-center lg:text-[35px] md:text-[20px] mt-4">JS</h1>
+                    <p class="text-white font-semi-bold text-center lg:text-[10px] md:text-[11px]">JavaScript</p>
                 </div>
             </div>
 
-            <div class="card w-[300px] h-[120px] rounded-xl bg-[#00E6F6] flex shadow-lg shadow-[#00E6F6] mr-3">
-                <div class="w-[50%] pl-3">
-                    <img src="assets/tailwind.png" alt="" class="w-[90px] h-[90px] mt-3">
+            <div class="card lg:w-[300px] lg:h-[120px] md:w-[250px] md:h-[100px] rounded-xl bg-[#00E6F6] flex shadow-lg shadow-[#00E6F6] mr-3">
+                <div class="lg:w-[50%] md:w-[40%] pl-3">
+                    <img src="assets/tailwind.png" alt="" class="lg:w-[90px] lg:h-[90px] md:w-[70px] md:h-[70px] lg:mt-3 md:mt-3">
                 </div>
                 <div class="w-[50%]">
-                    <h1 class="text-white font-bold  text-[30px] mt-4">TAILWIND</h1>
-                    <p class="text-white font-semi-bold text-[10px]">CSS Framework</p>
+                    <h1 class="text-white font-bold md:text-center lg:text-start  lg:text-[30px] md:text-[18px] mt-4">TAILWIND</h1>
+                    <p class="text-white font-semi-bold lg:text-[10px] lg:text-start md:text-center md:text-[11px]">CSS Framework</p>
                 </div>
             </div>
 
         </div>
         <!-- batas row petama -->
 
+        
         <!-- row kedua -->
-        <div class="carousel3 flex justify-between w-full h-[140px] mt-8 px-4 overflow-x-hidden">
+        <div class="carousel3 flex justify-between w-full md:h-[120px] lg:h-[140px] lg:mt-8 px-4 overflow-x-hidden">
 
-            <div class="card3 w-[300px] h-[120px] rounded-xl bg-[#00E6F6] flex shadow-lg shadow-[#00E6F6] mr-3">
-                <div class="w-[50%]">
-                    <img src="assets/mysql.png" alt="" class="w-[90px] h-[90px] mt-3">
+            <div class="card3 lg:w-[300px] lg:h-[120px] md:w-[250px] md:h-[100px] rounded-xl bg-[#00E6F6] flex shadow-lg shadow-[#00E6F6] mr-3">
+                <div class="lg:w-[50%] md:w-[40%]">
+                    <img src="assets/mysql.png" alt="" class="lg:w-[90px] lg:h-[90px] md:w-[70px] md:h-[70px] lg:mt-3 md:mt-5">
                 </div>
                 <div class="w-[50%]">
-                    <h1 class="text-white font-bold text-center text-[35px] mt-4">MYSQL</h1>
-                    <p class="text-white font-semi-bold text-[10px] text-center">Database Relation</p>
+                    <h1 class="text-white font-bold text-center lg:text-[35px] md:text-[20px] mt-4">MYSQL</h1>
+                    <p class="text-white font-semi-bold lg:text-[10px] lg:text-center md:text-[11px]">Database Relation</p>
                 </div>
             </div>
 
-            <div class="card3 w-[300px] h-[120px] rounded-xl bg-[#00E6F6] flex shadow-lg shadow-[#00E6F6] mr-3">
-                <div class="w-[50%] pl-3">
-                    <img src="assets/mongo.png" alt="" class="w-[90px] h-[90px] mt-3">
+            <div class="card3 lg:w-[300px] lg:h-[120px] md:w-[250px] md:h-[100px] rounded-xl bg-[#00E6F6] flex shadow-lg shadow-[#00E6F6] mr-3">
+                <div class="lg:w-[50%] md:w-[40%] pl-3">
+                    <img src="assets/mongo.png" alt="" class="lg:w-[90px] lg:h-[90px] md:w-[70px] md:h-[70px] mt-3">
                 </div>
                 <div class="w-[50%]">
-                    <h1 class="text-white font-bold  text-[25px] mt-4">MONGODB</h1>
-                    <p class="text-white font-semi-bold text-center text-[10px]">Database Not Relation</p>
+                    <h1 class="text-white font-bold  lg:text-[25px] md:text-[20px] mt-4">MONGODB</h1>
+                    <p class="text-white font-semi-bold text-center lg:text-[10px] md:text-[10px]">Database Not Relation</p>
                 </div>
             </div>
 
-            <div class="card3 w-[300px] h-[120px] rounded-xl bg-[#00E6F6] flex shadow-lg shadow-[#00E6F6] mr-3">
+            <div class="card3 lg:w-[300px] lg:h-[120px] md:w-[250px] md:h-[100px] rounded-xl bg-[#00E6F6] flex shadow-lg shadow-[#00E6F6] mr-3">
                 <div class="w-[50%] pl-3">
-                    <img src="assets/php.png" alt="" class="w-[90px] h-[90px] mt-3">
+                    <img src="assets/php.png" alt="" class="lg:w-[90px] lg:h-[90px] md:w-[70px] md:h-[70px] mt-3">
                 </div>
                 <div class="w-[50%]">
-                    <h1 class="text-white font-bold text-center text-[35px] mt-4">PHP</h1>
-                    <p class="text-white font-semi-bold text-[10px] text-center">Programing Language</p>
+                    <h1 class="text-white font-bold text-center lg:text-[35px] md:text-[20px] mt-4">PHP</h1>
+                    <p class="text-white font-semi-bold lg:text-[10px] text-center md:text-[11px]">Programing Language</p>
                 </div>
             </div>
 
-            <div class="card3 w-[300px] h-[120px] rounded-xl bg-[#00E6F6] flex shadow-lg shadow-[#00E6F6] mr-3">
-                <div class="w-[50%] pl-3">
-                    <img src="assets/java.png" alt="" class="w-[90px] h-[90px] mt-3">
+            <div class="card3 lg:w-[300px] lg:h-[120px] md:w-[250px] md:h-[100px] rounded-xl bg-[#00E6F6] flex shadow-lg shadow-[#00E6F6] mr-3">
+                <div class="lg:w-[50%] md:w-[40%] pl-3">
+                    <img src="assets/java.png" alt="" class="lg:w-[90px] lg:h-[90px] md:w-[70px] md:h-[70px] mt-3 ">
                 </div>
                 <div class="w-[50%]">
-                    <h1 class="text-white font-bold text-center  text-[30px] mt-4">JAVA</h1>
-                    <p class="text-white font-semi-bold text-[10px] text-center">Programing Language</p>
+                    <h1 class="text-white font-bold text-center  lg:text-[30px] mt-4 md:text-[20px]">JAVA</h1>
+                    <p class="text-white font-semi-bold lg:text-[10px] text-center md:text-[10px]">Programing Language</p>
                 </div>
             </div>
 
         </div>
         <!-- batas row kedua -->
 
+        
         <!-- row ketiga -->
         <div class="carousel2 flex justify-between w-full h-[140px] mt-8 px-4 overflow-x-hidden">
 
-            <div class="card2 w-[300px] h-[120px] rounded-xl bg-[#00E6F6] flex shadow-lg shadow-[#00E6F6] mr-3">
+            <div class="card2 lg:w-[300px] lg:h-[120px] md:w-[250px] md:h-[100px] rounded-xl bg-[#00E6F6] flex shadow-lg shadow-[#00E6F6] mr-3">
                 <div class="w-[50%]">
-                    <img src="assets/nodejs.png" alt="" class="w-[90px] h-[90px] mt-3">
+                    <img src="assets/nodejs.png" alt="" class="lg:w-[90px] lg:h-[90px] md:w-[70px] md:h-[70px] mt-3">
                 </div>
                 <div class="w-[50%]">
-                    <h1 class="text-white font-bold text-center text-[35px] mt-4">MYSQL</h1>
-                    <p class="text-white font-semi-bold text-[10px] text-center">Database Relation</p>
+                    <h1 class="text-white font-bold text-center lg:text-[35px] mt-4 md:text-[20px]">NodeJS</h1>
+                    <p class="text-white font-semi-bold lg:text-[10px] text-center md:text-[10px]">JavaScript Runtime</p>
                 </div>
             </div>
 
-            <div class="card2 w-[300px] h-[120px] rounded-xl bg-[#00E6F6] flex shadow-lg shadow-[#00E6F6] mr-3">
+            <div class="card2 lg:w-[300px] lg:h-[120px] md:w-[250px] md:h-[100px] rounded-xl bg-[#00E6F6] flex shadow-lg shadow-[#00E6F6] mr-3">
                 <div class="w-[50%] pl-3">
-                    <img src="assets/laravel.png" alt="" class="w-[90px] h-[90px] mt-3">
+                    <img src="assets/laravel.png" alt="" class="lg:w-[90px] lg:h-[90px] md:w-[70px] md:h-[70px] mt-3">
                 </div>
                 <div class="w-[50%]">
-                    <h1 class="text-white font-bold text-center  text-[25px] mt-4">Laravel</h1>
-                    <p class="text-white font-semi-bold text-center text-[10px]">PHP Framework</p>
+                    <h1 class="text-white font-bold text-center  lg:text-[25px] mt-4 md:text-[20px]">Laravel</h1>
+                    <p class="text-white font-semi-bold text-center lg:text-[10px] md:text-[10px]">PHP Framework</p>
                 </div>
             </div>
 
-            <div class="card2 w-[300px] h-[120px] rounded-xl bg-[#00E6F6] flex shadow-lg shadow-[#00E6F6] mr-3">
-                <div class="w-[50%] pl-3">
-                    <img src="assets/vue.png" alt="" class="w-[90px] h-[90px] mt-3">
+            <div class="card2 lg:w-[300px] lg:h-[120px] md:w-[250px] md:h-[100px] rounded-xl bg-[#00E6F6] flex shadow-lg shadow-[#00E6F6] mr-3">
+                <div class="lg:w-[50%] md:w-[40%] pl-3">
+                    <img src="assets/vue.png" alt="" class="lg:w-[90px] lg:h-[90px] md:w-[70px] md:h-[70px] mt-3">
                 </div>
                 <div class="w-[50%]">
-                    <h1 class="text-white font-bold text-center text-[35px] mt-4">VUE</h1>
-                    <p class="text-white font-semi-bold text-[10px] text-center">JavaScript Framework</p>
+                    <h1 class="text-white font-bold text-center lg:text-[35px] mt-4 md:text-[20px]">VUE</h1>
+                    <p class="text-white font-semi-bold lg:text-[10px] text-center md:text-[12px]">JavaScript Framework</p>
                 </div>
             </div>
 
-            <div class="card2 w-[300px] h-[120px] rounded-xl bg-[#00E6F6] flex shadow-lg shadow-[#00E6F6] mr-3">
-                <div class="w-[50%] pl-3">
-                    <img src="assets/codeIgnator.png" alt="" class="w-[90px] h-[90px] mt-3">
+            <div class="card2 lg:w-[300px] lg:h-[120px] md:w-[250px] md:h-[100px] rounded-xl bg-[#00E6F6] flex shadow-lg shadow-[#00E6F6] mr-3">
+                <div class="lg:w-[50%] md:w-[40%] pl-3">
+                    <img src="assets/codeIgnator.png" alt="" class="lg:w-[90px] lg:h-[90px] md:w-[70px] md:h-[70px] mt-3">
                 </div>
                 <div class="w-[50%]">
-                    <h1 class="text-white font-bold text-[20px] mt-4">CodeIgnitor3</h1>
-                    <p class="text-white font-semi-bold text-[10px] text-center">PHP Framework</p>
+                    <h1 class="text-white font-bold lg:text-[20px] mt-4 md:text-[18px]">CodeIgnitor3</h1>
+                    <p class="text-white font-semi-bold lg:text-[10px] text-center md:text-[11px]">PHP Framework</p>
                 </div>
             </div>
 
@@ -263,67 +285,67 @@
         <!-- batas row ketiga -->
     </div>
 
-    <div id="skill" class="w-full  h-[620px] bg-[#0D1117] border-t border-[#00E6F6] py-3 px-3 overflow-x-hidden">
-        <p class="text-center text-[#00E6F6] text-[30px] mt-6">I can do</p>
+    <div id="skill" class="w-full  lg:h-[620px] bg-[#0D1117] border-t border-[#00E6F6] py-3 px-3 overflow-x-hidden">
+        <p class="text-center text-[#00E6F6] lg:text-[30px] mt-6 font-roboto md:text-[24px] font-bold">I Can Do</p>
 
-        <div class="flex flex-wrap justify-between w-full">
-            <div class="w-[32%] h-[480px]  bg-[#1E1E1E] rounded-xl my-auto mr-3 mt-3 overflow-hidden">
-                <div class="w-full h-[80px] bg-[#00E6F6] py-4">
-                    <p class="text-white text-[24px] text-center font-bold">Frontend Web</p>
+        <div class="flex flex-wrap lg:justify-between w-full">
+            <div class="w-[32%] lg:h-[480px] md:h-[400px]  bg-[#1E1E1E] rounded-xl my-auto mr-3 mt-3 overflow-hidden">
+                <div class="w-full lg:h-[80px] bg-[#00E6F6] py-4">
+                    <p class="text-white lg:text-[24px] md:text-[20px] text-center font-bold">Frontend Web</p>
                 </div>
 
-                <p class="text-white px-5 py-3 text-[19px]"> 
+                <p class="text-white px-5 py-3 lg:text-[19px]"> 
                     I have experience in creating visually appealing and user-friendly interfaces for websites. My skills include using modern tools and technologies to craft responsive designs that provide seamless user experiences. I pay attention to details and ensure the design aligns with user requirements and branding guidelines.
                 </p>
 
             </div>
 
-            <div class="w-[32%] h-[480px] bg-[#1E1E1E] rounded-xl my-auto mr-3 mt-3 overflow-hidden">
-                <div class="w-full h-[80px] bg-[#00E6F6] py-4">
-                    <p class="text-white text-[24px] text-center font-bold">Web Development</p>
+            <div class="w-[32%] lg:h-[480px] md:h-[400px] bg-[#1E1E1E] rounded-xl my-auto mr-3 mt-3 overflow-hidden">
+                <div class="w-full lg:h-[80px] bg-[#00E6F6] py-4">
+                    <p class="text-white lg:text-[24px] md:text-[20px] text-center font-bold">Web Development</p>
                 </div>
-                <p class="text-white px-5 py-3 text-[19px]"> I specialize in developing dynamic and functional websites. My work focuses on building robust and scalable web applications that meet diverse business needs. From integrating APIs to optimizing site performance, I ensure the final product is efficient and reliable
+                <p class="text-white px-5 py-3 lg:text-[19px]"> I specialize in developing dynamic and functional websites. My work focuses on building robust and scalable web applications that meet diverse business needs. From integrating APIs to optimizing site performance, I ensure the final product is efficient and reliable
                 </p>
             </div>
 
-            <div class="w-[32%] h-[480px] bg-[#1E1E1E] rounded-xl my-auto mr-3 mt-3 overflow-hidden">
-                <div class="w-full h-[80px] bg-[#00E6F6] py-4">
-                    <p class="text-white text-[24px] text-center font-bold">Backend</p>
+            <div class="w-[32%] lg:h-[480px] md:h-[400px] bg-[#1E1E1E] rounded-xl my-auto lg:mr-3 mt-3 overflow-hidden">
+                <div class="w-full lg:h-[80px] bg-[#00E6F6] py-4">
+                    <p class="text-white lg:text-[24px] md:text-[20px] text-center font-bold">Backend</p>
                 </div>
-                <p class="text-white px-2 py-3 text-[19px]"> Focusing on creating server-side logic and managing databases. My skills include building secure, efficient, and scalable systems that support the functionality of web applications. I ensure data integrity and seamless communication between the server and client
+                <p class="text-white px-2 py-3 lg:text-[19px]"> Focusing on creating server-side logic and managing databases. My skills include building secure, efficient, and scalable systems that support the functionality of web applications. I ensure data integrity and seamless communication between the server and client
                 </p>
             </div>
         </div>
     </div>
 
-    <div id="portofolio" class="w-full h-[880px] bg-[#0D1117] border-t border-[#00E6F6] py-3 overflow-x-hidden">
-        <p class="text-center text-[#00E6F6] text-[30px] mt-6">Portofolio</p>
+    <div id="portfolio" class="w-full lg:h-[880px] bg-[#0D1117] border-t border-[#00E6F6] py-3 overflow-x-hidden">
+        <p class="text-center text-[#00E6F6] lg:text-[30px] md:text-[24px] mt-6 font-roboto font-bold">Portofolio</p>
 
         <div class="w-[90%] flex justify-center px-3 mt-5 mx-auto">
 
-            <div class="w-[400px] h-[550px] bg-[#1E1E1E] rounded-xl px-5 py-5  mr-5">
-                <img src="assets/panser/pesanan.png" alt="" class="rounded-xl">
+            <div class="lg:w-[400px] md:w-[350px] md:h-[500px] lg:h-[550px] bg-[#1E1E1E] rounded-xl px-5 py-5  mr-5">
+                <img src="assets/panser/pesanan.png" alt="" class="rounded-xl border-4 border-[#00E6F6]">
                 
-                <h1 class="font-bold text-[#00E6F6] mt-6 text-[20px]">Mobile E-commerce Management</h1>
+                <h1 class="font-bold text-[#00E6F6] mt-6 lg:text-[20px] md:text-[18px]">Mobile E-commerce Management</h1>
 
-                <div class="w-full px-3 h-[100px] overflow-scroll">
+                <div class="w-full px-3 lg:h-[100px] md:h-[97px] overflow-scroll">
                     <p class="text-white">I developed a comprehensive admin panel for a mobile e-commerce application to streamline backend operations. This system enables administrators to efficiently manage products, orders, categories, drivers, and shipping rates. Key features include adding, editing, and deleting products, categories, and drivers; processing and confirming customer orders; and managing delivery tariffs. The panel was built with Vue.js and integrated with a RESTful API for seamless communication with the backend. This project highlights my ability to design and implement scalable, user-friendly admin solutions for e-commerce platforms.</p>
                 </div>
 
-                <button class="shadow-lg shadow-[#00E6F6] hover:bg-[#00E6F6] hover:text-white font-bold w-[300px] h-[50px] px-5 rounded-xl ml-[30px] border-2 border-[#00E6F6] text-[#00E6F6] mt-7">View Detail</button>
+                <button class="shadow-lg shadow-[#00E6F6] hover:bg-[#00E6F6] hover:text-white font-bold lg:w-[300px] lg:h-[50px] md:w-[280px] md:h-[50px] px-5 rounded-xl lg:ml-[30px] md:ml-[22px] border-2 border-[#00E6F6] text-[#00E6F6] mt-7">View Detail</button>
 
             </div>
 
-            <div class="w-[400px] h-[550px] bg-[#1E1E1E] px-5 py-5 rounded-xl ">
-                <img src="assets/barang/barang.png" alt="" class="rounded-xl h-[260px]">
+            <div class="lg:w-[400px] lg:h-[550px] md:w-[350px] md:h-[500px] bg-[#1E1E1E] px-5 py-5 rounded-xl overflow-hidden ">
+                <img src="assets/barang/barang.png" alt="" class="rounded-xl lg:h-[260px] md:h-[230px] border-4 border-[#00E6F6]">
                 
-                <h1 class="font-bold text-[#00E6F6] mt-6 text-[20px]">Iventory</h1>
+                <h1 class="font-bold text-[#00E6F6] mt-6 lg:text-[20px] md:text-[18px]">Iventory</h1>
 
-                <div class="w-full px-3 h-[100px] overflow-scroll">
+                <div class="w-full px-3 lg:h-[100px] md:h-[97px] overflow-y-scroll">
                     <p class="text-white">I created an inventory management system that simplifies the tracking of product stock and outgoing items. The system allows administrators to efficiently add, update, and delete products, as well as monitor product outflows. It also includes a comprehensive reporting feature to generate detailed reports on outgoing items, providing insights into inventory usage and trends. This project showcases my expertise in developing systems for inventory tracking and reporting, ensuring streamlined operations and accurate data management.</p>
                 </div>
 
-                <button id="show2" class="shadow-lg shadow-[#00E6F6] hover:bg-[#00E6F6] hover:text-white font-bold w-[300px] h-[50px] px-5 rounded-xl ml-[30px] border-2 border-[#00E6F6] text-[#00E6F6] mt-7">View Detail</button>
+                <button id="show2" class="shadow-lg shadow-[#00E6F6] hover:bg-[#00E6F6] hover:text-white font-bold lg:w-[300px] lg:h-[50px] md:w-[280px] md:ml-[22px] md:h-[50px] px-5 rounded-xl lg:ml-[30px] border-2 border-[#00E6F6] text-[#00E6F6] lg:mt-7 md:mt-6">View Detail</button>
 
 
             </div>
@@ -332,36 +354,36 @@
     </div>
 
 
-    <div id="contact" class="flex w-full h-[180px] bg-[#0D1117] border-t border-[#00E6F6] py-3 overflow-x-hidden">
+    <div id="contact" class="flex w-full lg:h-[180px] md:h-[160px] bg-[#0D1117] border-t border-[#00E6F6] py-3 overflow-x-hidden">
 
         <div class="w-[4%] flex-col justify-end px-5">
-            <div class="w-[40px] h-[40px] rounded-full border-2 border-[#00E6F6] mr-4 cursor-pointer mb-2">
-                <i class="fa-brands fa-linkedin-in text-[#00E6F6] ml-[10px] mt-[10px] text-[18px]"></i>
+            <div class="lg:w-[40px] lg:h-[40px] md:w-[35px] md:h-[35px] rounded-full border-2 border-[#00E6F6] mr-4 cursor-pointer mb-2">
+                <i class="fa-brands fa-linkedin-in text-[#00E6F6] lg:ml-[10px] mt-[10px] md:ml-[8px] md:mt-[8px] lg:text-[18px]"></i>
             </div>
-            <div class="w-[40px] h-[40px] rounded-full border-2 border-[#00E6F6] mr-4 cursor-pointer mb-2">
-                <i class="fa-brands fa-instagram text-[#00E6F6] ml-[10px] mt-[10px] text-[18px]"></i>
+            <div class="lg:w-[40px] lg:h-[40px] md:w-[35px] md:h-[35px] rounded-full border-2 border-[#00E6F6] mr-4 cursor-pointer mb-2">
+                <i class="fa-brands fa-instagram text-[#00E6F6] lg:ml-[10px] lg:mt-[10px] md:ml-[8px] md:mt-[8px] lg:text-[18px]"></i>
             </div>
-            <div class="w-[40px] h-[40px] rounded-full border-2 border-[#00E6F6] cursor-pointer">
-                <i class="fa-brands fa-whatsapp text-[#00E6F6] ml-[10px] mt-[10px] text-[18px]"></i>
+            <div class="lg:w-[40px] lg:h-[40px] md:w-[35px] md:h-[35px] rounded-full border-2 border-[#00E6F6] cursor-pointer">
+                <i class="fa-brands fa-whatsapp text-[#00E6F6] lg:ml-[10px] md:ml-[8px] md:mt-[8px] lg:mt-[10px] lg:text-[18px]"></i>
             </div>
         </div>
 
-        <div class="w-[40%] flex-col justify-end px-5">
-            <p class="text-[#00E6F6] text-[20px] font-semi-bold">Muhamad Arif</p>
-            <p class="text-[#00E6F6] text-[20px] font-semi-bold mt-5">a_riifff</p>
-            <p class="text-[#00E6F6] text-[20px] font-semi-bold mt-5">+62 878-8078-5245</p>
+        <div class="lg:w-[40%] md:w-[30%] flex-col justify-end px-5">
+            <p class="text-[#00E6F6] lg:text-[20px] md:text-[18px] font-semi-bold">Muhamad Arif</p>
+            <p class="text-[#00E6F6] lg:text-[20px] md:text-[18px] font-semi-bold mt-5">a_riifff</p>
+            <p class="text-[#00E6F6] lg:text-[20px] md:text-[18px] font-semi-bold mt-5">+62 878-8078-5245</p>
         </div>
 
-        <div class="w-[34%] my-auto">
-            <p class="text-[#00E6F6] text-[18px] font-semi-bold">Copyright &#169; 2024 Muhamad Arif</p>
+        <div class="lg:w-[34%] md:w-[39%] my-auto">
+            <p class="text-[#00E6F6] lg:text-[18px] font-semi-bold">Copyright &#169; 2024 Muhamad Arif</p>
            
             
         </div>
 
         <div class="w-20%">
-            <p class="text-[#00E6F6] text-[20px] font-bold">Muhamad Arif</p>
+            <p class="text-[#00E6F6] lg:text-[20px] font-bold">Muhamad Arif</p>
             <i class="fa-solid fa-location-dot text-[#00E6F6] mt-6"></i><span class="text-[#00E6F6] ml-3">Tangerang City, Indonesian</span>
-            <p class="text-[#00E6F6] text-[20px] font-thin mt-5">Muhmdarif3@gmail.com</p>
+            <p class="text-[#00E6F6] lg:text-[20px] font-thin mt-5">Muhmdarif3@gmail.com</p>
         </div>
         
 

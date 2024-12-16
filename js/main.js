@@ -8,10 +8,7 @@ const delayBetweenRoles = 1500;
 
 function typeEffect() {
   const typingContainer = document.getElementById("typing");
-  // typingContainer.textContent = roles[currentRole];
-  // currentRole = (currentRole + 1) % roles.length;
-  // setTimeout(typeEffect, 4000); // Change role every 4 seconds
-
+ 
   if (charIndex === roles[currentRole].length) {
     setTimeout(() => {
       charIndex = 0;
@@ -31,6 +28,14 @@ function typeEffect() {
 }
 
 typeEffect()
+
+
+const menuToggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu');
+
+menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+});
 
 
 let buttonDetail2 = document.getElementById('show2')
@@ -55,7 +60,7 @@ let currentPosition = 0;
 
 
 function moveCarousel() {
-  currentPosition -= 0.5; // Geser carousel ke kiri sedikit demi sedikit
+  currentPosition -= 0.5; 
   carousel.style.transform = `translateX(${currentPosition}px)`;
 
   
@@ -74,7 +79,7 @@ function moveCarousel() {
   
 }
 
-// Mulai pergerakan carousel
+
 moveCarousel();
 
 
@@ -86,7 +91,7 @@ let currentPosition2 = 0;
 
 
 function moveCarousel2() {
-  currentPosition2 -= 0.5; // Geser carousel ke kiri sedikit demi sedikit
+  currentPosition2 -= 0.5; 
   carousel2.style.transform = `translateX(${currentPosition2}px)`;
 
   
@@ -105,69 +110,35 @@ function moveCarousel2() {
   
 }
 
-// Mulai pergerakan carousel
+
 moveCarousel2();
 
 
-
-// const carousel3 = document.querySelector('.carousel3');
-// const cards3 = document.querySelectorAll('.card3');
-// const cardWidth3 = cards3[0].offsetWidth + 5;
-// let currentPosition3 = 0;
-
-// function moveCarousel3() {
-//   currentPosition3 -= 0.5; // Geser carousel ke kiri sedikit demi sedikit
-//   carousel3.style.transform = `translateX(${currentPosition3}px)`;
-
-  
-//   // if (Math.abs(currentPosition3) >= cardWidth3) {
-//   //   carousel3.appendChild(carousel3.firstElementChild);
-//   //   carousel3.style.transition = 'none';
-//   //   currentPosition3 += cardWidth3; 
-//   //   carousel3.style.transform = `translateX(${currentPosition3}px)`;
-//   // }
-
-//   if (currentPosition3 >= cardWidth3) {
-//     // Pindahkan elemen terakhir ke depan
-//     carousel3.insertBefore(carousel3.lastElementChild, carousel3.firstElementChild);
-//     carousel3.style.transition = 'none';
-//     currentPosition3 -= cardWidth3; // Sesuaikan posisi setelah elemen dipindahkan
-//     carousel3.style.transform = `translateX(${currentPosition3}px)`;
-//   }
-//   setTimeout(() => {
-//     carousel3.style.transition = 'transform   ease-in'; 
-//   }, 0);
-  
-//   requestAnimationFrame(moveCarousel3);
-
-  
-// }
-
 const carousel3 = document.querySelector('.carousel3');
 const cards3 = document.querySelectorAll('.card3');
-const cardWidth3 = cards3[0].offsetWidth + 5; // Lebar kartu termasuk margin/padding
+const cardWidth3 = cards3[0].offsetWidth + 5; 
 let currentPosition3 = 0;
 
 function moveCarousel3() {
-  currentPosition3 += 0.5; // Geser carousel ke kanan sedikit demi sedikit
+  currentPosition3 += 0.5; 
   carousel3.style.transform = `translateX(${currentPosition3}px)`;
 
-  // Jika sudah bergeser melebihi lebar satu kartu, pindahkan elemen pertama ke akhir
+  
   if (currentPosition3 >= cardWidth3) {
-    carousel3.style.transition = 'none'; // Nonaktifkan animasi sementara
-    currentPosition3 -= cardWidth3; // Kurangi posisi untuk reset
+    carousel3.style.transition = 'none'; 
+    currentPosition3 -= cardWidth3; 
     carousel3.style.transform = `translateX(${currentPosition3}px)`;
-    carousel3.insertBefore(carousel3.lastElementChild, carousel3.firstElementChild); // Pindahkan elemen terakhir ke awal
+    carousel3.insertBefore(carousel3.lastElementChild, carousel3.firstElementChild); 
   }
 
   setTimeout(() => {
     carousel3.style.transition = 'transform ease-in'; 
   }, 0);
 
-  requestAnimationFrame(moveCarousel3); // Panggil ulang untuk animasi terus-menerus
+  requestAnimationFrame(moveCarousel3); 
 }
 
-// Mulai pergerakan carousel
+
 moveCarousel3();
 
 
