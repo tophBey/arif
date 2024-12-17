@@ -37,19 +37,31 @@ let linkAbout = document.querySelector('.about')
 let linkPorto = document.querySelector('.portfolio')
 let linkContact = document.querySelector('.contact')
 
+const isMobile = () => window.innerWidth < 768;
+
 
 menuToggle.addEventListener('click', () => {
-      link.classList.toggle('h-[190px]')
+
+  if (isMobile()) {
+    link.classList.toggle('h-[190px]');
+  }
+
 });
 
 linkAbout.addEventListener('click', () => {
-  link.classList.toggle('h-[190px]')
+  if (isMobile()) {
+    link.classList.toggle('h-[190px]');
+  }
 })
 linkPorto.addEventListener('click', () => {
-  link.classList.toggle('h-[190px]')
+  if (isMobile()) {
+    link.classList.toggle('h-[190px]');
+  }
 })
 linkContact.addEventListener('click', () => {
-  link.classList.toggle('h-[190px]')
+  if (isMobile()) {
+    link.classList.toggle('h-[190px]');
+  }
 })
 
 
