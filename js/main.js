@@ -32,10 +32,25 @@ typeEffect()
 
 const menuToggle = document.getElementById('menu-toggle');
 const menu = document.getElementById('menu');
+let link = document.querySelector('.link')
+let linkAbout = document.querySelector('.about')
+let linkPorto = document.querySelector('.portfolio')
+let linkContact = document.querySelector('.contact')
+
 
 menuToggle.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
+      link.classList.toggle('h-[190px]')
 });
+
+linkAbout.addEventListener('click', () => {
+  link.classList.toggle('h-[190px]')
+})
+linkPorto.addEventListener('click', () => {
+  link.classList.toggle('h-[190px]')
+})
+linkContact.addEventListener('click', () => {
+  link.classList.toggle('h-[190px]')
+})
 
 
 let buttonDetail2 = document.getElementById('show2')
