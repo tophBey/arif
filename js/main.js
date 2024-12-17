@@ -31,7 +31,7 @@ typeEffect()
 
 
 const menuToggle = document.getElementById('menu-toggle');
-        const menu = document.getElementById('menu');
+const menu = document.getElementById('menu');
 
 menuToggle.addEventListener('click', () => {
             menu.classList.toggle('hidden');
@@ -39,13 +39,34 @@ menuToggle.addEventListener('click', () => {
 
 
 let buttonDetail2 = document.getElementById('show2')
+let instagram = document.querySelector('.instagram')
+let linkedin = document.querySelector('.linkedin')
+let whatsApp = document.querySelector('.whatapp')
 
 
 buttonDetail2.addEventListener("click", () => {
-  
   window.open("https://github.com/tophBey/barang", "_blank");
-  
 });
+
+instagram.addEventListener("click", () => {
+  window.open("https://www.instagram.com/a_riifff/", "_blank");
+});
+
+linkedin.addEventListener("click", () => {
+  window.open("https://www.linkedin.com/in/muhamad-arif-985609202?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app", "_blank");
+});
+
+whatsApp.addEventListener("click", () => {
+
+  const phoneNumber = "6287880785245";
+        const message = encodeURIComponent("Halo, saya tertarik untuk berbicara dengan Anda");
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+        
+        
+        window.open(whatsappUrl, "_blank");
+
+});
+
 
 
 
