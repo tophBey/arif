@@ -13,6 +13,7 @@
         integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <title>Muhamad Arif</title>
     <script>
         tailwind.config = {
             theme: {
@@ -55,13 +56,24 @@
     </script>
 </head>
 
-<body>
+<body id="container" class="bg-[#0D1117] transition">
 
-    <div class="link z-10 fixed top-0 left-0 right-0 bg-[#0D1117] h-11 lg:flex md:flex px-3 py-2 text-white  border-b border-[#00E6F6] sm:overflow-hidden">
+    <div class="link z-10 fixed top-0 left-0 right-0 bg-[#0D1117] h-16 lg:py-4 lg:flex md:flex px-3 py-2 text-white  border-b border-[#00E6F6] sm:overflow-hidden">
 
-        <button id="menu-toggle" class="lg:hidden md:hidden text-white text-2xl">
-            <i class="fas fa-bars"></i>
-        </button>
+        <div class="flex gap-5 w-full lg:hidden md:hidden justify-between">
+            <button id="menu-toggle" class="lg:hidden md:hidden py-2 text-white text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="lg:hidden md:hidden py-2">
+                <p class="font-semibold text-2xl">Muhamad Arif</p>
+            </div>
+            <label class="lg:hidden md:hidden inline-flex items-center me-5 cursor-pointer">
+                <input id="toggleChecked" type="checkbox" value="" class="sr-only peer">
+                <div class="relative w-9 h-5 bg-neutral-quaternary rounded-full peer dark:bg-gray-700 peer-focus:ring-4 peer-focus:ring-[#00E6F6] dark:peer-focus:ring-yellow-400 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-yellow-400 dark:peer-checked:bg-yellow-400"></div>
+                <span id="contentToggle" class="select-none ms-3 font-medium text-heading text-xl">🌔</span>
+            </label>
+        </div>
+      
 
         <h1 class="lg:w-[50%] md:w-[50%] sm:w-full sm:ml-[37%] lg:ml-20 md:ml-20 text-[22px] sm:mx-auto font-roboto font-bold ">Portofolio</h1>
 
@@ -69,68 +81,72 @@
        
 
         <div class="md:flex md:justify-center lg:flex lg:justify-center lg:w-[50%] md:w-[50%] sm:w-full">
-            <div id="menu" class="lg:flex md:flex lg:w-[80%] md:w-[80%] sm:w-full md:justify-between lg:justify-between">
+            <div id="menu" class="lg:flex md:flex lg:w-[80%] md:w-[80%] sm:w-full md:justify-between lg:justify-center md:gap-0 sm:gap-0 lg:gap-12">
                 <a href="" class="lg:hover:text-[#00E6F6] md:hover:text-[#00E6F6] sm:hover:text-white sm:hover:bg-[#00E6F6] md:hover:bg-[#0D1117] lg:hover:bg-[#0D1117] sm:block sm:text-center md:inline lg:inline font-roboto">Home</a>
                 <a href="#about" class="about lg:hover:text-[#00E6F6] md:hover:text-[#00E6F6] sm:hover:text-white sm:hover:bg-[#00E6F6] md:hover:bg-[#0D1117] lg:hover:bg-[#0D1117] sm:text-center sm:block md:inline lg:inline font-roboto">About</a>
                 <a href="#portfolio" class="portfolio lg:hover:text-[#00E6F6] md:hover:text-[#00E6F6] sm:hover:text-white sm:hover:bg-[#00E6F6] sm:text-center md:hover:bg-[#0D1117] lg:hover:bg-[#0D1117]  sm:block md:inline lg:inline font-roboto">Portofolio</a>
                 <a href="#contact" class="contact lg:hover:text-[#00E6F6] md:hover:text-[#00E6F6] sm:hover:text-white sm:hover:bg-[#00E6F6] sm:text-center md:hover:bg-[#0D1117] lg:hover:bg-[#0D1117]  sm:block md:inline lg:inline font-roboto ">Contact</a>
             </div>
+             <label class="inline-flex items-center ml-5 me-5 cursor-pointer">
+                <input id="toggleChecked2" type="checkbox" value="" class="sr-only peer">
+                <div class="relative w-9 h-5 bg-neutral-quaternary rounded-full peer dark:bg-gray-700 peer-focus:ring-4 peer-focus:ring-[#00E6F6] dark:peer-focus:ring-yellow-400 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-yellow-400 dark:peer-checked:bg-yellow-400"></div>
+                <span id="contentToggle" class="select-none ms-3 font-medium text-heading text-xl">🌔</span>
+            </label>
         </div>
 
     </div>
 
-    <div class="w-full h-screen bg-[#0D1117] overflow-hidden">
+    <div  class="w-full h-screen  overflow-hidden">
         <div class="lg:flex lg:flex-row md:flex-col w-full lg:mt-15 md:mt-14  px-11">
             <div class="lg:w-[50%] md:w-[100%] mr-1 lg:h-screen md:h-[50%] md:px-11 md:py-11 lg:py-14 sm:py-11">
                 <div class="main w-full lg:mt-1 md:mt-11 sm:mt-11">
-                    <h2 class="text-white lg:text-[40px] md:text-[30px] sm:text-[20px] font-roboto">Hello, It's Me</h2>
-                    <h1 class="text-white lg:text-[58px] md:text-[40px] sm:text-[25px] font-roboto font-semibold">Muhamad Arif</h1>
-                    <h2 class="text-white lg:text-[32px] md:text-[28px] sm:text-[18px] inline lg:mr-3 font-roboto">And, I'am a </h2><span id="typing"
-                        class="lg:text-[32px] sm:text-[18px] md:text-[28px] font-roboto font-bold text-[#00E6F6]"></span>
+                    <h2  class="text-content text-white  lg:text-[40px] md:text-[30px] sm:text-[20px] font-roboto">Hello, It's Me</h2>
+                    <h1 class="text-content text-white  lg:text-[58px] md:text-[40px] sm:text-[25px] font-roboto font-semibold">Muhamad Arif</h1>
+                    <h2 class="text-content text-white  lg:text-[32px] md:text-[28px] sm:text-[18px] inline lg:mr-3 font-roboto">And, I'am a </h2><span id="typing"
+                        class="lg:text-[32px] sm:text-[18px] md:text-[28px] font-roboto font-bold text-[#00E6F6] heading-title"></span>
                 </div>
-                <p class="text-white font-roboto sm:text-[12px] md:text-[14px] lg:text-[18px] font-normal">I’m a passionate junior developer eager to learn and grow in the tech industry. I enjoy solving problems, building websites, and exploring new technologies to improve my skills every day.</p>
+                <p class="text-content text-white font-roboto sm:text-[12px] md:text-[14px] lg:text-[18px] font-normal">I’m a passionate junior developer eager to learn and grow in the tech industry. I enjoy solving problems, building websites, and exploring new technologies to improve my skills every day.</p>
 
                 <div class="flex w-full mt-5">
-                    <div id="linkedin" class="linkedin w-[60px] h-[60px]  rounded-full border-2 border-[#00E6F6] hover:border-white hover:bg-[#00E6F6] group mr-4 cursor-pointer ">
-                        <i class="fa-brands fa-linkedin-in text-[#00E6F6] md:text-[20px] md:ml-[18px] sm:text-[18px]  group-hover:text-white sm:mt-5 sm:ml-5 md:mt-4 lg:ml-4 lg:mt-4 lg:text-[24px]"></i>
+                    <div id="linkedin" class="linkedin w-[60px] h-[60px] text-[#00E6F6]  rounded-full border-2 border-[#00E6F6] hover:border-white hover:bg-[#00E6F6] group mr-4 cursor-pointer icon-toggle">
+                        <i class="fa-brands fa-linkedin-in  md:text-[20px] md:ml-[18px] sm:text-[18px]  group-hover:text-white sm:mt-5 sm:ml-5 md:mt-4 lg:ml-4 lg:mt-4 lg:text-[24px]"></i>
                     </div>
-                    <div id="instagram" class="instagram w-[60px] h-[60px] rounded-full border-2 border-[#00E6F6] mr-4  hover:border-white hover:bg-[#00E6F6] cursor-pointer group">
-                        <i class="fa-brands fa-instagram text-[#00E6F6] lg:ml-4 lg:mt-4 lg:text-[24px] sm:text-[18px] sm:mt-5  group-hover:text-white sm:ml-5 md:text-[20px] md:ml-[18px] md:mt-4"></i>
+                    <div id="instagram" class="instagram w-[60px] h-[60px] text-[#00E6F6] rounded-full border-2 border-[#00E6F6] mr-4  hover:border-white hover:bg-[#00E6F6] cursor-pointer group icon-toggle">
+                        <i class="fa-brands fa-instagram  lg:ml-4 lg:mt-4 lg:text-[24px] sm:text-[18px] sm:mt-5  group-hover:text-white sm:ml-5 md:text-[20px] md:ml-[18px] md:mt-4"></i>
                     </div>
-                    <div id="whatapp" class="whatapp w-[60px] h-[60px] rounded-full border-2 border-[#00E6F6] cursor-pointer  hover:border-white hover:bg-[#00E6F6] group">
-                        <i class="fa-brands fa-whatsapp text-[#00E6F6] lg:ml-4 lg:mt-4 lg:text-[24px] sm:text-[18px] sm:mt-5  group-hover:text-white sm:ml-5 md:text-[20px] md:ml-[18px] md:mt-4"></i>
+                    <div id="whatapp" class="whatapp w-[60px] h-[60px] text-[#00E6F6] rounded-full border-2 border-[#00E6F6] cursor-pointer  hover:border-white hover:bg-[#00E6F6] group icon-toggle">
+                        <i class="fa-brands fa-whatsapp  lg:ml-4 lg:mt-4 lg:text-[24px] sm:text-[18px] sm:mt-5  group-hover:text-white sm:ml-5 md:text-[20px] md:ml-[18px] md:mt-4"></i>
                     </div>
                 </div>
 
-                <button
-                    class="mt-5 text-white bg-[#00E6F6] lg:w-[170px] sm:w-[150px] md:w-[200px] px-3 h-[50px] rounded-2xl shadow-lg shadow-[#00E6F6] hover:bg-[#0D1117] hover:border-2 hover:border-[#00E6F6] hover:text-[#00E6F6] font-bold">Download
-                    CV</button>
+                <button id="btn-banner"
+                    class="mt-5  text-content bg-[#00E6F6] lg:w-[170px] sm:w-[150px] md:w-[200px] px-3 h-[50px] rounded-2xl shadow-lg shadow-[#00E6F6] hover:bg-[#0D1117] hover:border-2 hover:border-[#00E6F6] hover:text-[#00E6F6] font-bold">View Project</button>
 
             </div>
 
             <div class="lg:w-[50%] md:w-[100%] lg:h-screen md:h-[50%] lg:px-11 lg:py-11">
                 <div
-                    class="hexagon sm:w-[300px] sm:h-[330px] md:w-[400px] md:h-[430px] lg:w-[400px] lg:h-[430px] bg-[#00E6F6] lg:mt-11 mx-auto outline outline-offset-4 border-4 border-[#00E6F6] outline-[#00E6F6] animate-slowBounce ">
+                    class="hexagon sm:w-[300px] sm:h-[330px] md:w-[400px] md:h-[430px] lg:w-[400px] lg:h-[430px] bg-[#00E6F6] lg:mt-11 mx-auto outline outline-offset-4 border-4 border-[#00E6F6] hexagon-toggle animate-slowBounce ">
                     <img src="assets/me.jpeg" alt="Profile">
                 </div>
             </div>
         </div>
     </div>
 
-    <div id="about" class="w-full h-[480px] bg-[#0D1117] border-t border-[#00E6F6] py-3 overflow-hidden">
-        <p class="text-center text-[#00E6F6] lg:text-[30px] md:text-[24px] sm:text-[18px] mt-6 font-bold font-roboto">About Me</p>
+    <div id="about" class="w-full h-[480px]  border-t border-[#00E6F6] py-3 overflow-hidden">
+        <p class="text-center text-[#00E6F6] lg:text-[30px] md:text-[24px] sm:text-[18px] mt-6 font-bold font-roboto heading-title">About Me</p>
 
         <div class="w-full lg:flex md:flex h-full">
 
             <div class="lg:w-[50%] md:w-[50%] sm:w-full">
                 <div
-                    class="hexagon-2 sm:w-[200px] sm:h-[230px] md:w-[300px] md:h-[330px] lg:w-[300px] lg:h-[330px] bg-[#00E6F6]  mx-auto outline outline-offset-4 border-4 border-[#00E6F6] outline-[#00E6F6]  ">
+                    class="hexagon-2 sm:w-[200px] sm:h-[230px] md:w-[300px] md:h-[330px] lg:w-[300px] lg:h-[330px] bg-[#00E6F6]  mx-auto outline outline-offset-4 border-4 border-[#00E6F6] hexagon-toggle  ">
                     <img src="assets/me.jpeg" alt="Profile">
                 </div>
             </div>
 
             <div class="lg:w-[50%] md:w-[50%] sm:w-full px-5">
-                <p class="mt-8 text-white lg:text-[18px] sm:text-[12px] md:text-[16px] font-roboto font-normal">Hello! My name is Muhamad Arif, and I am currently in my final year of university. 
+                <p class="mt-8 text-content text-white lg:text-[18px] sm:text-[12px] md:text-[16px] font-roboto font-normal">Hello! My name is Muhamad Arif, and I am currently in my final year of university. 
                     I am passionate about technology, particularly web development, and have been honing my skills in 
                     building dynamic and responsive websites. As a student, I enjoy exploring new technologies, solving 
                     real-world problems, and working on projects that allow me to grow both personally and professionally. 
@@ -141,50 +157,50 @@
         </div>
     </div>
 
-    <div id="skill" class="w-full lg:h-[680px] bg-[#0D1117] border-t border-[#00E6F6] py-3 overflow-hidden relative">
-        <p class="text-center text-[#00E6F6] lg:text-[30px] md:text-[24px] sm:text-[18px] mt-6 font-roboto font-bold">My Skill</p>
+    <div id="skill" class="w-full lg:h-[680px]  border-t border-[#00E6F6] py-3 overflow-hidden relative">
+        <p class="text-center text-[#00E6F6] lg:text-[30px] md:text-[24px] sm:text-[18px] mt-6 font-roboto font-bold heading-title">My Skill</p>
         <!-- row pertama -->
         
         
         <div  class=" carousel lg:justify-between md:justify-between flex w-screen md:h-[140px] sm:h-[120px] lg:h-[140px] mt-14 px-4 overflow-x-hidden">
 
-            <div class="card sm:w-[220px] sm:h-[85px] lg:w-[300px] md:w-[250px] md:h-[100px] lg:h-[120px] rounded-xl bg-[#00E6F6] lg:flex md:flex  shadow-lg shadow-[#00E6F6] mr-3">
+            <div class="card card-item sm:w-[220px] sm:h-[85px] lg:w-[300px] md:w-[250px] md:h-[100px] lg:h-[120px] rounded-xl bg-[#00E6F6] lg:flex md:flex  shadow-lg shadow-[#00E6F6] mr-3">
                 <div class="lg:w-[50%] md:w-[40%]">
                     <img src="assets/html.png" alt="" class="lg:w-[90px] lg:h-[90px] md:w-[70px] md:h-[70px] sm:h-[40px] sm:mx-auto md:mx-0 lg:mx-0 mt-3">
                 </div>
                 <div class="w-[50%]">
-                    <h1 class="text-white font-bold lg:text-center lg:text-[35px] md:text-[20px] md:text-start sm:ml-5 md:ml-0 lg:ml-0 lg:mt-4 md:mt-4">HTML</h1>
-                    <p class="text-white font-semi-bold lg:text-[10px] md:block lg:block sm:hidden md:text-[11px]">Hypertext Markup Language</p>
+                    <h1 class=" text-content text-white font-bold lg:text-center lg:text-[35px] md:text-[20px] md:text-start sm:ml-5 md:ml-0 lg:ml-0 lg:mt-4 md:mt-4">HTML</h1>
+                    <p class=" text-content text-white font-semi-bold lg:text-[10px] md:block lg:block sm:hidden md:text-[11px]">Hypertext Markup Language</p>
                 </div>
             </div>
 
-            <div class="card sm:w-[220px] sm:h-[85px] lg:w-[300px] md:w-[250px] md:h-[100px] lg:h-[120px] rounded-xl bg-[#00E6F6] md:flex lg:flex shadow-lg shadow-[#00E6F6] mr-3">
+            <div class="card card-item sm:w-[220px] sm:h-[85px] lg:w-[300px] md:w-[250px] md:h-[100px] lg:h-[120px] rounded-xl bg-[#00E6F6] md:flex lg:flex shadow-lg shadow-[#00E6F6] mr-3">
                 <div class="lg:w-[50%] md:w-[45%] pl-3">
                     <img src="assets/css.png" alt="" class="lg:w-[90px] lg:h-[90px] md:w-[60px] md:h-[70px] sm:ml-4 md:ml-0 lg:ml-0 sm:h-[40px] mt-3">
                 </div>
                 <div class="w-[50%]">
-                    <h1 class="text-white font-bold lg:text-center lg:text-[35px] md:text-[20px] sm:ml-6 md:ml-0 lg:ml-0 lg:mt-4 md:mt-4">CSS</h1>
-                    <p class="text-white font-semi-bold lg:text-center md:block lg:block sm:hidden lg:text-[10px] md:text-[11px]">Cascading Style Sheets</p>
+                    <h1 class="text-content text-white font-bold lg:text-center lg:text-[35px] md:text-[20px] sm:ml-6 md:ml-0 lg:ml-0 lg:mt-4 md:mt-4">CSS</h1>
+                    <p class="text-content text-white font-semi-bold lg:text-center md:block lg:block sm:hidden lg:text-[10px] md:text-[11px]">Cascading Style Sheets</p>
                 </div>
             </div>
 
-            <div class="card sm:w-[220px] sm:h-[85px] lg:w-[300px] lg:h-[120px] md:w-[250px] md:h-[100px] rounded-xl bg-[#00E6F6]  md:flex lg:flex shadow-lg shadow-[#00E6F6] mr-3">
+            <div class="card card-item sm:w-[220px] sm:h-[85px] lg:w-[300px] lg:h-[120px] md:w-[250px] md:h-[100px] rounded-xl bg-[#00E6F6]  md:flex lg:flex shadow-lg shadow-[#00E6F6] mr-3">
                 <div class="w-[50%] pl-3">
                     <img src="assets/js.png" alt="" class="lg:w-[90px] lg:h-[90px] mt-3 md:w-[70px] md:h-[70px] sm:h-[40px] sm:ml-3 md:ml-0 lg:ml-0 rounded-xl">
                 </div>
                 <div class="w-[50%]">
-                    <h1 class="text-white font-bold text-center lg:text-[35px] md:text-[20px] sm:ml-6 md:ml-0 lg:ml-0 lg:mt-4 md:mt-4">JS</h1>
-                    <p class="text-white font-semi-bold text-center md:block lg:block sm:hidden lg:text-[10px] md:text-[11px]">JavaScript</p>
+                    <h1 class="text-content text-white font-bold text-center lg:text-[35px] md:text-[20px] sm:ml-6 md:ml-0 lg:ml-0 lg:mt-4 md:mt-4">JS</h1>
+                    <p class="text-content text-white font-semi-bold text-center md:block lg:block sm:hidden lg:text-[10px] md:text-[11px]">JavaScript</p>
                 </div>
             </div>
 
-            <div class="card sm:w-[200px] sm:h-[85px] lg:w-[300px] lg:h-[120px] md:w-[250px] md:h-[100px] rounded-xl bg-[#00E6F6] lg:flex md:flex shadow-lg shadow-[#00E6F6] lg:mr-3 md:mr-3 sm:mr-3">
+            <div class="card card-item card-item sm:w-[200px] sm:h-[85px] lg:w-[300px] lg:h-[120px] md:w-[250px] md:h-[100px] rounded-xl bg-[#00E6F6] lg:flex md:flex shadow-lg shadow-[#00E6F6] lg:mr-3 md:mr-3 sm:mr-3">
                 <div class="lg:w-[50%] md:w-[40%] pl-3">
                     <img src="assets/tailwind.png" alt="" class="lg:w-[90px] lg:h-[90px] md:w-[70px] md:h-[70px] sm:w-[40px] sm:h-[40px] sm:ml-3 sm:mt-2 md:ml-0 lg:ml-0 lg:mt-3 md:mt-3">
                 </div>
                 <div class="w-[50%]">
-                    <h1 class="text-white font-bold md:text-center lg:text-start  lg:text-[30px] md:text-[18px] sm:text-[14px] sm:mt-2 sm:ml-1 md:ml-0 lg:ml-0 lg:mt-4 md:mt-4">TAILWIND</h1>
-                    <p class="text-white font-semi-bold lg:text-[10px] md:block lg:block sm:hidden lg:text-start md:text-center md:text-[11px]">CSS Framework</p>
+                    <h1 class="text-content text-white font-bold md:text-center lg:text-start  lg:text-[30px] md:text-[18px] sm:text-[14px] sm:mt-2 sm:ml-1 md:ml-0 lg:ml-0 lg:mt-4 md:mt-4">TAILWIND</h1>
+                    <p class="text-content text-white font-semi-bold lg:text-[10px] md:block lg:block sm:hidden lg:text-start md:text-center md:text-[11px]">CSS Framework</p>
                 </div>
             </div>
 
@@ -195,43 +211,43 @@
         <!-- row kedua -->
         <div class="carousel3 lg:justify-between md:justify-between flex  w-full md:h-[120px] lg:h-[140px] sm:h-[120px] lg:mt-8 px-4 overflow-x-hidden">
 
-            <div class="card3 sm:w-[220px] sm:h-[85px] lg:w-[300px] lg:h-[120px] md:w-[250px] md:h-[100px] rounded-xl bg-[#00E6F6] md:flex lg:flex shadow-lg shadow-[#00E6F6] mr-3">
+            <div class="card3 card-item sm:w-[220px] sm:h-[85px] lg:w-[300px] lg:h-[120px] md:w-[250px] md:h-[100px] rounded-xl bg-[#00E6F6] md:flex lg:flex shadow-lg shadow-[#00E6F6] mr-3">
                 <div class="lg:w-[50%] md:w-[40%]">
                     <img src="assets/mysql.png" alt="" class="lg:w-[90px] lg:h-[90px] md:w-[70px] md:h-[70px] sm:h-[40px] lg:mt-3 md:mt-5">
                 </div>
                 <div class="w-[50%]">
-                    <h1 class="text-white font-bold text-center lg:text-[35px] md:text-[20px] sm:mt-2 sm:ml-2 md:ml-0 lg:ml-0 lg:mt-4 md:mt-4">MYSQL</h1>
-                    <p class="text-white font-semi-bold lg:text-[10px] lg:text-center md:block lg:block sm:hidden md:text-[11px]">Database Relation</p>
+                    <h1 class="text-content text-white font-bold text-center lg:text-[35px] md:text-[20px] sm:mt-2 sm:ml-2 md:ml-0 lg:ml-0 lg:mt-4 md:mt-4">MYSQL</h1>
+                    <p class="text-content text-white font-semi-bold lg:text-[10px] lg:text-center md:block lg:block sm:hidden md:text-[11px]">Database Relation</p>
                 </div>
             </div>
 
-            <div class="card3 sm:w-[220px] sm:h-[85px] lg:w-[300px] lg:h-[120px] md:w-[250px] md:h-[100px] rounded-xl bg-[#00E6F6] md:flex lg:flex shadow-lg shadow-[#00E6F6] mr-3">
+            <div class="card3 card-item sm:w-[220px] sm:h-[85px] lg:w-[300px] lg:h-[120px] md:w-[250px] md:h-[100px] rounded-xl bg-[#00E6F6] md:flex lg:flex shadow-lg shadow-[#00E6F6] mr-3">
                 <div class="lg:w-[50%] md:w-[40%] pl-3">
                     <img src="assets/mongo.png" alt="" class="lg:w-[90px] lg:h-[90px] md:w-[70px] md:h-[70px] sm:h-[40px] sm:ml-3 md:ml-0 lg:ml-0 mt-3">
                 </div>
                 <div class="w-[50%]">
-                    <h1 class="text-white font-bold  lg:text-[25px] md:text-[20px] sm:mt-2 sm:ml-2 md:ml-0 lg:ml-0 lg:mt-4 md:mt-4 sm:text-[12px]">MONGODB</h1>
-                    <p class="text-white font-semi-bold text-center md:block lg:block sm:hidden lg:text-[10px] md:text-[10px]">Database Not Relation</p>
+                    <h1 class="text-content text-white font-bold  lg:text-[25px] md:text-[20px] sm:mt-2 sm:ml-2 md:ml-0 lg:ml-0 lg:mt-4 md:mt-4 sm:text-[12px]">MONGODB</h1>
+                    <p class="text-content text-white font-semi-bold text-center md:block lg:block sm:hidden lg:text-[10px] md:text-[10px]">Database Not Relation</p>
                 </div>
             </div>
 
-            <div class="card3 sm:w-[220px] sm:h-[85px] lg:w-[300px] lg:h-[120px] md:w-[250px] md:h-[100px] rounded-xl bg-[#00E6F6] md:flex lg:flex shadow-lg shadow-[#00E6F6] mr-3">
+            <div class="card3 card-item sm:w-[220px] sm:h-[85px] lg:w-[300px] lg:h-[120px] md:w-[250px] md:h-[100px] rounded-xl bg-[#00E6F6] md:flex lg:flex shadow-lg shadow-[#00E6F6] mr-3">
                 <div class="w-[50%] pl-3">
                     <img src="assets/php.png" alt="" class="lg:w-[90px] lg:h-[90px] md:w-[70px] md:h-[70px] sm:h-[30px] sm:ml-3 md:ml-0 lg:ml-0 mt-3">
                 </div>
                 <div class="w-[50%]">
-                    <h1 class="text-white font-bold text-center lg:text-[35px] md:text-[20px] sm:ml-5 sm:mt-3 md:ml-0 lg:ml-0 lg:mt-4 md:mt-4">PHP</h1>
-                    <p class="text-white font-semi-bold lg:text-[10px] md:block lg:block sm:hidden text-center md:text-[11px]">Programing Language</p>
+                    <h1 class="text-content text-white font-bold text-center lg:text-[35px] md:text-[20px] sm:ml-5 sm:mt-3 md:ml-0 lg:ml-0 lg:mt-4 md:mt-4">PHP</h1>
+                    <p class="text-content text-white font-semi-bold lg:text-[10px] md:block lg:block sm:hidden text-center md:text-[11px]">Programing Language</p>
                 </div>
             </div>
 
-            <div class="card3 sm:w-[200px] sm:h-[85px] lg:w-[300px] lg:h-[120px] md:w-[250px] md:h-[100px] rounded-xl bg-[#00E6F6] md:flex lg:flex shadow-lg shadow-[#00E6F6] lg:mr-3 md:mr-3 sm:mr-3">
+            <div class="card3 card-item sm:w-[200px] sm:h-[85px] lg:w-[300px] lg:h-[120px] md:w-[250px] md:h-[100px] rounded-xl bg-[#00E6F6] md:flex lg:flex shadow-lg shadow-[#00E6F6] lg:mr-3 md:mr-3 sm:mr-3">
                 <div class="lg:w-[50%] md:w-[40%] pl-3">
                     <img src="assets/java.png" alt="" class="lg:w-[90px] lg:h-[90px] md:w-[70px] md:h-[70px] sm:h-[40px] sm:ml-1 md:ml-0 lg:ml-0 lg:mt-3 md:mt-2 ">
                 </div>
                 <div class="w-[50%]">
-                    <h1 class="text-white font-bold text-center  lg:text-[30px] sm:ml-2 md:ml-0 lg:ml-0 sm:mt-3 lg:mt-4 md:mt-4 md:text-[20px]">JAVA</h1>
-                    <p class="text-white font-semi-bold lg:text-[10px] md:block lg:block sm:hidden text-center md:text-[10px]">Programing Language</p>
+                    <h1 class="text-content text-white font-bold text-center  lg:text-[30px] sm:ml-2 md:ml-0 lg:ml-0 sm:mt-3 lg:mt-4 md:mt-4 md:text-[20px]">JAVA</h1>
+                    <p class="text-content text-white font-semi-bold lg:text-[10px] md:block lg:block sm:hidden text-center md:text-[10px]">Programing Language</p>
                 </div>
             </div>
 
@@ -242,43 +258,43 @@
         <!-- row ketiga -->
         <div class="carousel2 flex justify-between w-full md:h-[120px] lg:h-[140px] sm:h-[120px] lg:mt-8 md:mt-8 px-4 overflow-x-hidden">
 
-            <div class="card2 sm:w-[220px] sm:h-[85px] lg:w-[300px] lg:h-[120px] md:w-[250px] md:h-[100px] rounded-xl bg-[#00E6F6] lg:flex md:flex shadow-lg shadow-[#00E6F6] mr-3">
+            <div class="card2 card-item sm:w-[220px] sm:h-[85px] lg:w-[300px] lg:h-[120px] md:w-[250px] md:h-[100px] rounded-xl bg-[#00E6F6] lg:flex md:flex shadow-lg shadow-[#00E6F6] mr-3">
                 <div class="w-[50%]">
                     <img src="assets/nodejs.png" alt="" class="lg:w-[90px] lg:h-[90px] md:w-[70px] md:h-[70px] sm:h-[40px] sm:ml-4 md:ml-0 lg:ml-0 mt-3">
                 </div>
                 <div class="w-[50%]">
-                    <h1 class="text-white font-bold text-center lg:text-[35px] sm:ml-1 sm:mt-1 md:ml-0 lg:ml-0 lg:mt-4 md:mt-4 md:text-[20px] sm:text-[14px]">NodeJS</h1>
-                    <p class="text-white font-semi-bold lg:text-[10px] md:block lg:block sm:hidden text-center md:text-[10px]">JavaScript Runtime</p>
+                    <h1 class="text-content text-white font-bold text-center lg:text-[35px] sm:ml-1 sm:mt-1 md:ml-0 lg:ml-0 lg:mt-4 md:mt-4 md:text-[20px] sm:text-[14px]">NodeJS</h1>
+                    <p class="text-content text-white font-semi-bold lg:text-[10px] md:block lg:block sm:hidden text-center md:text-[10px]">JavaScript Runtime</p>
                 </div>
             </div>
 
-            <div class="card2 sm:w-[220px] sm:h-[85px] lg:w-[300px] lg:h-[120px] md:w-[250px] md:h-[100px] rounded-xl bg-[#00E6F6] md:flex lg:flex shadow-lg shadow-[#00E6F6] mr-3">
+            <div class="card2 card-item sm:w-[220px] sm:h-[85px] lg:w-[300px] lg:h-[120px] md:w-[250px] md:h-[100px] rounded-xl bg-[#00E6F6] md:flex lg:flex shadow-lg shadow-[#00E6F6] mr-3">
                 <div class="w-[50%] pl-3">
                     <img src="assets/laravel.png" alt="" class="lg:w-[90px] lg:h-[90px] md:w-[70px] md:h-[70px] md:h-[40px] sm:ml-2 md:ml-0 lg:ml-0 mt-3">
                 </div>
                 <div class="w-[50%]">
-                    <h1 class="text-white font-bold text-center  lg:text-[25px] sm:ml-2 sm:mt-4 md:ml-0 lg:ml-0 lg:mt-4 md:mt-4 md:text-[20px] sm:text-[14px]">Laravel</h1>
-                    <p class="text-white font-semi-bold text-center md:block lg:block sm:hidden lg:text-[10px] md:text-[10px]">PHP Framework</p>
+                    <h1 class="text-content text-white font-bold text-center  lg:text-[25px] sm:ml-2 sm:mt-4 md:ml-0 lg:ml-0 lg:mt-4 md:mt-4 md:text-[20px] sm:text-[14px]">Laravel</h1>
+                    <p class="text-content text-white font-semi-bold text-center md:block lg:block sm:hidden lg:text-[10px] md:text-[10px]">PHP Framework</p>
                 </div>
             </div>
 
-            <div class="card2 sm:w-[220px] sm:h-[85px] lg:w-[300px] lg:h-[120px] md:w-[250px] md:h-[100px] rounded-xl bg-[#00E6F6] md:flex lg:flex shadow-lg shadow-[#00E6F6] mr-3">
+            <div class="card2 card-item sm:w-[220px] sm:h-[85px] lg:w-[300px] lg:h-[120px] md:w-[250px] md:h-[100px] rounded-xl bg-[#00E6F6] md:flex lg:flex shadow-lg shadow-[#00E6F6] mr-3">
                 <div class="lg:w-[50%] md:w-[40%] pl-3">
                     <img src="assets/vue.png" alt="" class="lg:w-[90px] lg:h-[90px] md:w-[70px] md:h-[70px] sm:h-[40px]  md:ml-0 lg:ml-0 mt-3">
                 </div>
                 <div class="w-[50%]">
-                    <h1 class="text-white font-bold text-center lg:text-[35px] sm:ml-4 sm:mt-1 md:ml-0 lg:ml-0 lg:mt-4 md:mt-4 md:text-[20px]">VUE</h1>
-                    <p class="text-white font-semi-bold lg:text-[10px] md:block lg:block sm:hidden text-center md:text-[12px]">JavaScript Framework</p>
+                    <h1 class="text-content text-white font-bold text-center lg:text-[35px] sm:ml-4 sm:mt-1 md:ml-0 lg:ml-0 lg:mt-4 md:mt-4 md:text-[20px]">VUE</h1>
+                    <p class="text-content text-white font-semi-bold lg:text-[10px] md:block lg:block sm:hidden text-center md:text-[12px]">JavaScript Framework</p>
                 </div>
             </div>
 
-            <div class="card2 sm:w-[200px] sm:h-[85px] lg:w-[300px] lg:h-[120px] md:w-[250px] md:h-[100px] rounded-xl bg-[#00E6F6] lg:flex md:flex shadow-lg shadow-[#00E6F6] lg:mr-3 md:mr-3 sm:mr-3">
+            <div class="card2 card-item sm:w-[200px] sm:h-[85px] lg:w-[300px] lg:h-[120px] md:w-[250px] md:h-[100px] rounded-xl bg-[#00E6F6] lg:flex md:flex shadow-lg shadow-[#00E6F6] lg:mr-3 md:mr-3 sm:mr-3">
                 <div class="lg:w-[50%] md:w-[40%] pl-3">
                     <img src="assets/codeIgnator.png" alt="" class="lg:w-[90px] lg:h-[90px] md:w-[70px] md:h-[70px] sm:h-[40px] sm:ml-2 md:ml-0 lg:ml-0 mt-3">
                 </div>
                 <div class="w-[50%]">
-                    <h1 class="text-white font-bold lg:text-[20px] mt-4 md:text-[18px] sm:ml-1 sm:mt-1 md:ml-0 lg:ml-0 lg:mt-4 md:mt-4 sm:text-[10px]">CodeIgnitor3</h1>
-                    <p class="text-white font-semi-bold lg:text-[10px] md:block lg:block sm:hidden text-center md:text-[11px]">PHP Framework</p>
+                    <h1 class="text-content text-white font-bold lg:text-[20px] mt-4 md:text-[18px] sm:ml-1 sm:mt-1 md:ml-0 lg:ml-0 lg:mt-4 md:mt-4 sm:text-[10px]">CodeIgnitor3</h1>
+                    <p class="text-content text-white font-semi-bold lg:text-[10px] md:block lg:block sm:hidden text-center md:text-[11px]">PHP Framework</p>
                 </div>
             </div>
 
@@ -286,67 +302,67 @@
         <!-- batas row ketiga -->
     </div>
 
-    <div id="skill" class="w-full  lg:h-[620px] bg-[#0D1117] border-t border-[#00E6F6] py-3 px-3 overflow-x-hidden">
-        <p class="text-center text-[#00E6F6] lg:text-[30px] mt-6 font-roboto md:text-[24px] sm:text-[18px] font-bold">I Can Do</p>
+    <div id="skill" class="w-full  lg:h-[620px]  border-t border-[#00E6F6] py-3 px-3 overflow-x-hidden">
+        <p class="text-center text-[#00E6F6] lg:text-[30px] mt-6 font-roboto md:text-[24px] sm:text-[18px] font-bold heading-title">I Can Do</p>
 
         <div class="flex sm:flex-wrap lg:justify-between w-full">
-            <div class="lg:w-[32%] md:w-[32%] lg:h-[480px] md:h-[400px] sm:h-[350px]  bg-[#1E1E1E] rounded-xl lg:my-auto lg:mr-3 lg:mt-3 md:my-auto md:mt-3 md:mr-3  sm:mb-3 overflow-hidden">
-                <div class="w-full lg:h-[80px] bg-[#00E6F6] py-4">
+            <div class="card-bg lg:w-[32%] md:w-[32%] lg:h-[480px] md:h-[400px] sm:h-[350px]  bg-[#1E1E1E] rounded-xl lg:my-auto lg:mr-3 lg:mt-3 md:my-auto md:mt-3 md:mr-3  sm:mb-3 overflow-hidden">
+                <div class="w-full lg:h-[80px] bg-[#00E6F6] card-item py-4">
                     <p class="text-white lg:text-[24px] md:text-[20px] text-center font-bold">Frontend Web</p>
                 </div>
 
-                <p class="text-white px-5 py-3 lg:text-[19px]"> 
+                <p class="text-white text-content px-5 py-3 lg:text-[19px]"> 
                     I have experience in creating visually appealing and user-friendly interfaces for websites. My skills include using modern tools and technologies to craft responsive designs that provide seamless user experiences. I pay attention to details and ensure the design aligns with user requirements and branding guidelines.
                 </p>
 
             </div>
 
-            <div class="lg:w-[32%] md:w-[32%] lg:h-[480px] md:h-[400px] sm:h-[350px] bg-[#1E1E1E] rounded-xl lg:my-auto lg:mr-3 lg:mt-3 md:my-auto md:mt-3 md:mr-3  sm:mb-3 overflow-hidden">
-                <div class="w-full lg:h-[80px] bg-[#00E6F6] py-4">
+            <div class="card-bg lg:w-[32%] md:w-[32%] lg:h-[480px] md:h-[400px] sm:h-[350px] bg-[#1E1E1E] rounded-xl lg:my-auto lg:mr-3 lg:mt-3 md:my-auto md:mt-3 md:mr-3  sm:mb-3 overflow-hidden">
+                <div class="w-full lg:h-[80px] bg-[#00E6F6] py-4 card-item">
                     <p class="text-white lg:text-[24px] md:text-[20px] text-center font-bold">Web Development</p>
                 </div>
-                <p class="text-white px-5 py-3 lg:text-[19px]"> I specialize in developing dynamic and functional websites. My work focuses on building robust and scalable web applications that meet diverse business needs. From integrating APIs to optimizing site performance, I ensure the final product is efficient and reliable
+                <p class="text-white text-content px-5 py-3 lg:text-[19px]"> I specialize in developing dynamic and functional websites. My work focuses on building robust and scalable web applications that meet diverse business needs. From integrating APIs to optimizing site performance, I ensure the final product is efficient and reliable
                 </p>
             </div>
 
-            <div class="lg:w-[32%] md:w-[32%] lg:h-[480px] md:h-[400px] sm:h-[350px] bg-[#1E1E1E] rounded-xl lg:my-auto lg:mr-3 lg:mt-3 md:my-auto md:mt-3   sm:mb-3 overflow-hidden">
-                <div class="w-full lg:h-[80px] bg-[#00E6F6] py-4">
+            <div class="card-bg lg:w-[32%] md:w-[32%] lg:h-[480px] md:h-[400px] sm:h-[350px] bg-[#1E1E1E] rounded-xl lg:my-auto lg:mr-3 lg:mt-3 md:my-auto md:mt-3   sm:mb-3 overflow-hidden">
+                <div class="w-full lg:h-[80px] bg-[#00E6F6] card-item py-4">
                     <p class="text-white lg:text-[24px] md:text-[20px] text-center font-bold">Backend</p>
                 </div>
-                <p class="text-white px-2 py-3 lg:text-[19px]"> Focusing on creating server-side logic and managing databases. My skills include building secure, efficient, and scalable systems that support the functionality of web applications. I ensure data integrity and seamless communication between the server and client
+                <p class="text-white text-content px-2 py-3 lg:text-[19px]"> Focusing on creating server-side logic and managing databases. My skills include building secure, efficient, and scalable systems that support the functionality of web applications. I ensure data integrity and seamless communication between the server and client
                 </p>
             </div>
         </div>
     </div>
 
-    <div id="portfolio" class="w-full lg:h-[880px] bg-[#0D1117] border-t border-[#00E6F6] py-3 overflow-x-hidden">
-        <p class="text-center text-[#00E6F6] lg:text-[30px] md:text-[24px] mt-6 font-roboto font-bold">Portofolio</p>
+    <div id="portfolio" class="w-full lg:h-[880px]  border-t border-[#00E6F6] py-3 overflow-x-hidden">
+        <p class="text-center text-[#00E6F6] lg:text-[30px] md:text-[24px] mt-6 font-roboto font-bold heading-title">Portofolio</p>
 
-        <div class="lg:w-[90%] md:w-[90%] sm:w-[100%] flex justify-center px-3 mt-5 mx-auto">
+        <div  class="lg:w-[90%] md:w-[90%] sm:w-[100%] flex justify-center px-3 mt-5 mx-auto">
 
-            <div class="sm:w-[450px] sm:h-[300px] lg:w-[400px] md:w-[350px] md:h-[500px] lg:h-[550px] bg-[#1E1E1E] rounded-xl g:px-5 lg:py-5 md:py-5 md:px-5 sm:px-2 sm:py-2 mr-5 overflow-hidden">
-                <img src="assets/panser/pesanan.png" alt="" class="rounded-xl w-full lg:h-[260px] md:h-[230px] sm:h-[100px] border-4 border-[#00E6F6]">
+            <div class="card-bg  hover:shadow-lg transition sm:w-[450px] sm:h-[300px] lg:w-[400px] md:w-[350px] md:h-[500px] lg:h-[550px] bg-[#1E1E1E] rounded-xl g:px-5 lg:py-5 md:py-5 md:px-5 sm:px-2 sm:py-2 mr-5 overflow-hidden">
+                <img src="assets/panser/pesanan.png" alt="" class="rounded-xl w-full lg:h-[260px] md:h-[230px] sm:h-[100px] border-4 border-[#00E6F6] toggle-border">
                 
-                <h1 class="font-bold text-[#00E6F6] mt-6 lg:text-[20px] md:text-[18px] sm:text-[12px]">Mobile E-commerce Management</h1>
+                <h1 class="font-bold text-[#00E6F6] mt-6 lg:text-[20px] md:text-[18px] sm:text-[12px] heading-title">Mobile E-commerce Management</h1>
 
                 <div class="w-full lg:px-3 md:px3 sm:px-1 lg:h-[100px] md:h-[97px] sm:h-[50px] overflow-scroll">
-                    <p class="text-white lg:text-[20px] md:text-[16px] sm:text-[12px]">I developed a comprehensive admin panel for a mobile e-commerce application to streamline backend operations. This system enables administrators to efficiently manage products, orders, categories, drivers, and shipping rates. Key features include adding, editing, and deleting products, categories, and drivers; processing and confirming customer orders; and managing delivery tariffs. The panel was built with Vue.js and integrated with a RESTful API for seamless communication with the backend. This project highlights my ability to design and implement scalable, user-friendly admin solutions for e-commerce platforms.</p>
+                    <p class="text-content text-white lg:text-[20px] md:text-[16px] sm:text-[12px]">I developed a comprehensive admin panel for a mobile e-commerce application to streamline backend operations. This system enables administrators to efficiently manage products, orders, categories, drivers, and shipping rates. Key features include adding, editing, and deleting products, categories, and drivers; processing and confirming customer orders; and managing delivery tariffs. The panel was built with Vue.js and integrated with a RESTful API for seamless communication with the backend. This project highlights my ability to design and implement scalable, user-friendly admin solutions for e-commerce platforms.</p>
                 </div>
 
-                <button class="sm:w-[160px] sm:h-[40px]  sm:mt-6 sm:mx-auto sm:text-[12px] md:text-[18px] lg:text-[20px] shadow-lg shadow-[#00E6F6] hover:bg-[#00E6F6] hover:text-white font-bold lg:w-[365px] lg:h-[50px] md:w-[305px] md:h-[50px] px-5 rounded-xl   border-2 border-[#00E6F6] text-[#00E6F6] mt-7">View Detail</button>
+                <button class="sm:w-[160px] btn-card-hover sm:h-[40px]  sm:mt-6 sm:mx-auto sm:text-[12px] md:text-[18px] lg:text-[20px] transition hover:bg-[#00E6F6] hover:text-white font-bold lg:w-[365px] lg:h-[50px] md:w-[305px] md:h-[50px] px-5 rounded-xl   border-2 border-[#00E6F6] text-[#00E6F6] mt-7">View Detail</button>
 
             </div>
 
-            <div class="sm:w-[450px] sm:h-[300px] lg:w-[400px] lg:h-[550px] md:w-[350px] md:h-[500px] bg-[#1E1E1E] lg:px-5 lg:py-5 md:py-5 md:px-5 sm:px-2 sm:py-2 rounded-xl overflow-hidden ">
-                <img src="assets/barang/barang.png" alt="" class="rounded-xl lg:h-[260px] md:h-[230px] sm:h-[100px] w-full border-4 border-[#00E6F6]">
+            <div class="card-bg  hover:shadow-lg transition sm:w-[450px] sm:h-[300px] lg:w-[400px] lg:h-[550px] md:w-[350px] md:h-[500px] bg-[#1E1E1E] lg:px-5 lg:py-5 md:py-5 md:px-5 sm:px-2 sm:py-2 rounded-xl overflow-hidden ">
+                <img src="assets/barang/barang.png" alt="" class="rounded-xl lg:h-[260px] md:h-[230px] sm:h-[100px] w-full border-4 border-[#00E6F6] toggle-border">
                 
-                <h1 class="font-bold text-[#00E6F6] mt-6 lg:text-[20px] md:text-[18px]">Iventory</h1>
+                <h1 class="font-bold text-[#00E6F6] mt-6 lg:text-[20px] md:text-[18px] heading-title">Iventory</h1>
 
                 <div class="w-full lg:px-3 md:px-3 sm:px1 lg:h-[100px] md:h-[97px] sm:h-[60px] overflow-y-scroll">
-                    <p class="text-white lg:text-[20px] md:text-[16px] sm:text-[12px]">I created an inventory management system that simplifies the tracking of product stock and outgoing items. The system allows administrators to efficiently add, update, and delete products, as well as monitor product outflows. It also includes a comprehensive reporting feature to generate detailed reports on outgoing items, providing insights into inventory usage and trends. This project showcases my expertise in developing systems for inventory tracking and reporting, ensuring streamlined operations and accurate data management.</p>
+                    <p class="text-content text-white lg:text-[20px] md:text-[16px] sm:text-[12px]">I created an inventory management system that simplifies the tracking of product stock and outgoing items. The system allows administrators to efficiently add, update, and delete products, as well as monitor product outflows. It also includes a comprehensive reporting feature to generate detailed reports on outgoing items, providing insights into inventory usage and trends. This project showcases my expertise in developing systems for inventory tracking and reporting, ensuring streamlined operations and accurate data management.</p>
                 </div>
 
-                <button id="show2" class="sm:w-[160px] sm:h-[40px]   sm:mt-6 sm:text-[12px] md:text-[18px] lg:text-[20px] shadow-lg shadow-[#00E6F6] hover:bg-[#00E6F6] hover:text-white font-bold lg:w-[365px] lg:h-[50px] md:w-[305px]  md:h-[50px] px-5 rounded-xl  border-2 border-[#00E6F6] text-[#00E6F6] lg:mt-7 md:mt-6">View Detail</button>
+                <button id="show2" class="btn-card-hover sm:w-[160px] sm:h-[40px]   sm:mt-6 sm:text-[12px] md:text-[18px] lg:text-[20px] transition  hover:bg-[#00E6F6] hover:text-white font-bold lg:w-[365px] lg:h-[50px] md:w-[305px]  md:h-[50px] px-5 rounded-xl  border-2 border-[#00E6F6] text-[#00E6F6] lg:mt-7 md:mt-6">View Detail</button>
 
 
             </div>
@@ -376,7 +392,7 @@
         </div>
 
         <div class="lg:w-[34%] md:w-[39%] sm:w-[40%] my-auto">
-            <p class="text-[#00E6F6] lg:text-[18px] md:text-[18px] sm:text-[11px] font-semi-bold">Copyright &#169; 2024 Muhamad Arif</p>
+            <p class="text-[#00E6F6] lg:text-[18px] md:text-[18px] sm:text-[11px] font-semi-bold">Copyright &#169; <span id="year">2024</span> Muhamad Arif</p>
            
             
         </div>

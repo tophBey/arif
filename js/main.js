@@ -53,11 +53,13 @@ linkAbout.addEventListener('click', () => {
     link.classList.toggle('h-[190px]');
   }
 })
+
 linkPorto.addEventListener('click', () => {
   if (isMobile()) {
     link.classList.toggle('h-[190px]');
   }
 })
+
 linkContact.addEventListener('click', () => {
   if (isMobile()) {
     link.classList.toggle('h-[190px]');
@@ -188,6 +190,236 @@ function moveCarousel3() {
 
 
 moveCarousel3();
+let toggleChecked = document.getElementById('toggleChecked');
+let toggleChecked2 = document.getElementById('toggleChecked2');
 
+let texts = document.querySelectorAll('.text-content');
+let container = document.getElementById('container');
+let yearSpan = document.getElementById('year');
+let btnBanner = document.getElementById('btn-banner');
+let currentYear = new Date().getFullYear();
+let contentToggle = document.getElementById('contentToggle');
+let cardBg = document.querySelectorAll('.card-bg');
+let headingTitle = document.querySelectorAll('.heading-title');
+let cardItem = document.querySelectorAll('.card-item');
+let btnCardHover = document.querySelectorAll('.btn-card-hover');
+let borderToggle = document.querySelectorAll('.toggle-border');
+let hexagonToggle = document.querySelectorAll('.hexagon-toggle');
+let iconToggle = document.querySelectorAll('.icon-toggle');
+// bg-[#1E1E1E]
+
+function applyTheme(isDark) {
+  contentToggle.textContent = isDark ? '☀️' : '🌔';
+
+  container.classList.toggle('bg-[#0D1117]');
+
+  btnBanner.classList.toggle('bg-[#00E6F6]');
+  btnBanner.classList.toggle('border-[#00E6F6]');
+  btnBanner.classList.toggle('hover:bg-[#0D1117]');
+  btnBanner.classList.toggle('bg-yellow-400');
+  btnBanner.classList.toggle('shadow-[#00E6F6]');
+  btnBanner.classList.toggle('shadow-yellow-400');
+  btnBanner.classList.toggle('hover:border-yellow-600');
+  btnBanner.classList.toggle('hover:bg-white');
+  btnBanner.classList.toggle('hover:text-yellow-500');
+
+  iconToggle.forEach((el) => {
+    el.classList.toggle('text-[#00E6F6]');
+    el.classList.toggle('border-[#00E6F6]');
+    el.classList.toggle('text-yellow-400');
+    el.classList.toggle('border-yellow-400');
+    el.classList.toggle('hover:bg-yellow-400');
+  });
+
+  texts.forEach((el) => el.classList.toggle('text-white'));
+
+  cardBg.forEach((el) => {
+    el.classList.toggle('bg-[#1E1E1E]');
+    el.classList.toggle('bg-gray-100');
+  });
+
+  hexagonToggle.forEach((el) => {
+    el.classList.toggle('bg-[#00E6F6]');
+    el.classList.toggle('border-[#00E6F6]');
+    el.classList.toggle('border-yellow-400');
+    el.classList.toggle('bg-yellow-400');
+  });
+
+  headingTitle.forEach((el) => {
+    el.classList.toggle('text-[#00E6F6]');
+    el.classList.toggle('text-yellow-600');
+  });
+
+  cardItem.forEach((el) => {
+    el.classList.toggle('bg-[#00E6F6]');
+    el.classList.toggle('bg-yellow-400');
+  });
+
+  btnCardHover.forEach((el) => {
+    el.classList.toggle('hover:bg-[#00E6F6]');
+    el.classList.toggle('border-[#00E6F6]');
+    el.classList.toggle('text-yellow-400');
+    el.classList.toggle('hover:bg-yellow-500');
+    el.classList.toggle('border-yellow-400');
+    el.classList.toggle('shadow-lg');
+    el.classList.toggle('hover:shadow-yellow-400');
+  });
+
+  borderToggle.forEach((el) => {
+    el.classList.toggle('border-[#00E6F6]');
+    el.classList.toggle('border-yellow-400');
+  });
+}
+
+
+toggleChecked.addEventListener('change', () => {
+  applyTheme(toggleChecked.checked);
+});
+
+toggleChecked2.addEventListener('change', () => {
+  applyTheme(toggleChecked2.checked);
+});
+
+
+
+// toggleChecked.addEventListener('change', () => {
+//   if (toggleChecked.checked) {
+
+//     contentToggle.textContent = '☀️';
+//     container.classList.toggle('bg-[#0D1117]');
+
+
+//     btnBanner.classList.toggle('bg-[#00E6F6]');
+//     btnBanner.classList.toggle('border-[#00E6F6]');
+//     btnBanner.classList.toggle('hover:bg-[#0D1117]');
+//     btnBanner.classList.toggle('bg-yellow-400');
+//     btnBanner.classList.toggle('shadow-[#00E6F6]');
+//     btnBanner.classList.toggle('shadow-yellow-400');
+//     btnBanner.classList.toggle('hover:border-yellow-600');
+//     btnBanner.classList.toggle('hover:bg-white');
+//     btnBanner.classList.toggle('hover:text-yellow-500');
+
+//     iconToggle.forEach((element) => {
+//       element.classList.toggle('text-[#00E6F6]');
+//       element.classList.toggle('border-[#00E6F6]');
+//       element.classList.toggle('text-yellow-400');
+//       element.classList.toggle('border-yellow-400');
+//       element.classList.toggle('hover:bg-yellow-400');
+
+//     })
+
+
+//     texts.forEach((element) => {
+//       element.classList.toggle('text-white');
+//     })
+
+
+//     cardBg.forEach((element) => {
+//       element.classList.toggle('bg-[#1E1E1E]');
+//       element.classList.toggle('bg-gray-100');
+//     })
+
+//     hexagonToggle.forEach((element) => {
+//       element.classList.toggle('bg-[#00E6F6]');
+//       element.classList.toggle('border-[#00E6F6]');
+//       element.classList.toggle('border-yellow-400');
+//       element.classList.toggle('bg-yellow-400');
+//     })
+
+//     headingTitle.forEach((element) => {
+//       element.classList.toggle('text-[#00E6F6]');
+//       element.classList.toggle('text-yellow-600');
+//     })
+
+//      cardItem.forEach((element) => {
+//       element.classList.toggle('bg-[#00E6F6]');
+//       element.classList.toggle('bg-yellow-400');
+//     })
+
+    
+    
+//     btnCardHover.forEach((element) => {
+      
+//       element.classList.toggle('hover:bg-[#00E6F6]');
+//       element.classList.toggle('border-[#00E6F6]');
+//       element.classList.toggle('text-yellow-400');
+//       element.classList.toggle('hover:bg-yellow-500');
+//       element.classList.toggle('border-yellow-400');
+//       element.classList.toggle('shadow-lg');
+//       element.classList.toggle('hover:shadow-yellow-400');
+      
+//     })
+//     borderToggle.forEach((element) => {
+//       element.classList.toggle('border-[#00E6F6]');
+//       element.classList.toggle('border-yellow-400');
+//     })
+//   }else {
+//     contentToggle.textContent = '🌔';
+//     container.classList.toggle('bg-[#0D1117]');
+
+//     btnBanner.classList.toggle('bg-[#00E6F6]');
+//     btnBanner.classList.toggle('border-[#00E6F6]');
+//     btnBanner.classList.toggle('hover:bg-[#0D1117]');
+//     btnBanner.classList.toggle('bg-yellow-400');
+//     btnBanner.classList.toggle('shadow-[#00E6F6]');
+//     btnBanner.classList.toggle('shadow-yellow-400');
+//     btnBanner.classList.toggle('hover:border-yellow-600');
+//     btnBanner.classList.toggle('hover:bg-white');
+//     btnBanner.classList.toggle('hover:text-yellow-500');
+
+//      iconToggle.forEach((element) => {
+//       element.classList.toggle('text-[#00E6F6]');
+//       element.classList.toggle('border-[#00E6F6]');
+//       element.classList.toggle('text-yellow-400');
+//       element.classList.toggle('border-yellow-400');
+//       element.classList.toggle('hover:bg-yellow-400');
+
+//     })
+
+//     texts.forEach((element) => {
+//       element.classList.toggle('text-white');
+//     })
+
+//      cardBg.forEach((element) => {
+//       element.classList.toggle('bg-[#1E1E1E]');
+//       element.classList.toggle('bg-gray-100');
+//     })
+
+//      headingTitle.forEach((element) => {
+//       element.classList.toggle('text-[#00E6F6]');
+//       element.classList.toggle('text-yellow-600');
+//     })
+
+//      cardItem.forEach((element) => {
+//       element.classList.toggle('bg-[#00E6F6]');
+//       element.classList.toggle('bg-yellow-400');
+//     })
+
+//      hexagonToggle.forEach((element) => {
+//       element.classList.toggle('bg-[#00E6F6]');
+//       element.classList.toggle('border-[#00E6F6]');
+//       element.classList.toggle('border-yellow-400');
+//       element.classList.toggle('bg-yellow-400');
+//     })
+
+//     btnCardHover.forEach((element) => {
+      
+//       element.classList.toggle('hover:bg-[#00E6F6]');
+//       element.classList.toggle('border-[#00E6F6]');
+//       element.classList.toggle('text-yellow-400');
+//       element.classList.toggle('hover:bg-yellow-500');
+//       element.classList.toggle('border-yellow-400');
+//       element.classList.toggle('shadow-lg');
+//       element.classList.toggle('hover:shadow-yellow-400');
+      
+//     })
+
+//      borderToggle.forEach((element) => {
+//       element.classList.toggle('border-[#00E6F6]');
+//       element.classList.toggle('border-yellow-400');
+//     })
+//   }
+// })
+yearSpan.textContent = currentYear; 
 
 
