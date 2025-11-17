@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
         integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Muhamad Arif</title>
     <script>
@@ -58,7 +60,7 @@
 
 <body id="container" class="bg-[#0D1117] transition">
 
-    <div class="link z-10 fixed top-0 left-0 right-0 bg-[#0D1117] h-16 lg:py-4 lg:flex md:flex px-3 py-2 text-white  border-b border-[#00E6F6] sm:overflow-hidden">
+    <div class="nav-foot-bg link z-10 fixed top-0 left-0 right-0 bg-[#0D1117] h-16 lg:py-4 lg:flex md:flex px-3 py-2 text-white  border-b border-[#00E6F6] sm:overflow-hidden">
 
         <div class="flex gap-5 w-full lg:hidden md:hidden justify-between">
             <button id="menu-toggle" class="lg:hidden md:hidden py-2 text-white text-2xl">
@@ -74,31 +76,38 @@
             </label>
         </div>
       
+        <div class="flex gap-4 sm:hidden lg:flex lg:w-[50%] md:w-[50%] sm:w-full sm:ml-[37%] lg:ml-20 md:ml-20 ">
+            <div id="logo" class="rounded-full bg-[#00E6F6] py-5 flex justify-center items-center px-4">
+                <p class="font-bold">A</p>
+            </div>
+            <h1 class="text-[22px] lg:mx-0 md:mx-0 sm:mx-auto font-roboto font-bold">Arif</h1>
+        </div>
+        <h1 class="lg:hidden lg:w-[50%] md:w-[50%] sm:w-full sm:ml-[37%] lg:ml-20 md:ml-20 text-[22px] sm:mx-auto font-roboto font-bold ">Portofolio</h1>
 
-        <h1 class="lg:w-[50%] md:w-[50%] sm:w-full sm:ml-[37%] lg:ml-20 md:ml-20 text-[22px] sm:mx-auto font-roboto font-bold ">Portofolio</h1>
 
-        <!-- Hamburger Button -->
        
-
         <div class="md:flex md:justify-center lg:flex lg:justify-center lg:w-[50%] md:w-[50%] sm:w-full">
             <div id="menu" class="lg:flex md:flex lg:w-[80%] md:w-[80%] sm:w-full md:justify-between lg:justify-center md:gap-0 sm:gap-0 lg:gap-12">
-                <a href="" class="lg:hover:text-[#00E6F6] md:hover:text-[#00E6F6] sm:hover:text-white sm:hover:bg-[#00E6F6] md:hover:bg-[#0D1117] lg:hover:bg-[#0D1117] sm:block sm:text-center md:inline lg:inline font-roboto">Home</a>
-                <a href="#about" class="about lg:hover:text-[#00E6F6] md:hover:text-[#00E6F6] sm:hover:text-white sm:hover:bg-[#00E6F6] md:hover:bg-[#0D1117] lg:hover:bg-[#0D1117] sm:text-center sm:block md:inline lg:inline font-roboto">About</a>
-                <a href="#portfolio" class="portfolio lg:hover:text-[#00E6F6] md:hover:text-[#00E6F6] sm:hover:text-white sm:hover:bg-[#00E6F6] sm:text-center md:hover:bg-[#0D1117] lg:hover:bg-[#0D1117]  sm:block md:inline lg:inline font-roboto">Portofolio</a>
-                <a href="#contact" class="contact lg:hover:text-[#00E6F6] md:hover:text-[#00E6F6] sm:hover:text-white sm:hover:bg-[#00E6F6] sm:text-center md:hover:bg-[#0D1117] lg:hover:bg-[#0D1117]  sm:block md:inline lg:inline font-roboto ">Contact</a>
+                <a href="" class="nav-item lg:hover:text-[#00E6F6] md:hover:text-[#00E6F6] sm:hover:text-white sm:hover:bg-[#00E6F6] md:hover:bg-[#0D1117] lg:hover:bg-[#0D1117] sm:block sm:text-center md:inline lg:inline font-roboto">Home</a>
+                <a href="#about" class="nav-item about lg:hover:text-[#00E6F6] md:hover:text-[#00E6F6] sm:hover:text-white sm:hover:bg-[#00E6F6] md:hover:bg-[#0D1117] lg:hover:bg-[#0D1117] sm:text-center sm:block md:inline lg:inline font-roboto">About</a>
+                <a href="#portfolio" class="nav-item portfolio lg:hover:text-[#00E6F6] md:hover:text-[#00E6F6] sm:hover:text-white sm:hover:bg-[#00E6F6] sm:text-center md:hover:bg-[#0D1117] lg:hover:bg-[#0D1117]  sm:block md:inline lg:inline font-roboto">Portofolio</a>
+                <a href="#contact" class="nav-item contact lg:hover:text-[#00E6F6] md:hover:text-[#00E6F6] sm:hover:text-white sm:hover:bg-[#00E6F6] sm:text-center md:hover:bg-[#0D1117] lg:hover:bg-[#0D1117]  sm:block md:inline lg:inline font-roboto ">Contact</a>
             </div>
              <label class="inline-flex items-center ml-5 me-5 cursor-pointer">
                 <input id="toggleChecked2" type="checkbox" value="" class="sr-only peer">
                 <div class="relative w-9 h-5 bg-neutral-quaternary rounded-full peer dark:bg-gray-700 peer-focus:ring-4 peer-focus:ring-[#00E6F6] dark:peer-focus:ring-yellow-400 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-yellow-400 dark:peer-checked:bg-yellow-400"></div>
-                <span id="contentToggle" class="select-none ms-3 font-medium text-heading text-xl">🌔</span>
+                <span id="contentToggle2" class="select-none ms-3 font-medium text-heading text-xl">🌔</span>
             </label>
         </div>
+    <!-- batas hamburger menu -->
 
     </div>
 
     <div  class="w-full h-screen  overflow-hidden">
         <div class="lg:flex lg:flex-row md:flex-col w-full lg:mt-15 md:mt-14  px-11">
-            <div class="lg:w-[50%] md:w-[100%] mr-1 lg:h-screen md:h-[50%] md:px-11 md:py-11 lg:py-14 sm:py-11">
+            <div data-aos="fade-right"
+                 data-aos-duration="1500"
+                 data-aos-delay="100" class="lg:w-[50%] md:w-[100%] mr-1 lg:h-screen md:h-[50%] md:px-11 md:py-11 lg:py-14 sm:py-11">
                 <div class="main w-full lg:mt-1 md:mt-11 sm:mt-11">
                     <h2  class="text-content text-white  lg:text-[40px] md:text-[30px] sm:text-[20px] font-roboto">Hello, It's Me</h2>
                     <h1 class="text-content text-white  lg:text-[58px] md:text-[40px] sm:text-[25px] font-roboto font-semibold">Muhamad Arif</h1>
@@ -124,7 +133,9 @@
 
             </div>
 
-            <div class="lg:w-[50%] md:w-[100%] lg:h-screen md:h-[50%] lg:px-11 lg:py-11">
+            <div data-aos="fade-left"
+                 data-aos-duration="1500"
+                 data-aos-delay="800" class="lg:w-[50%] md:w-[100%] lg:h-screen md:h-[50%] lg:px-11 lg:py-11">
                 <div
                     class="hexagon sm:w-[300px] sm:h-[330px] md:w-[400px] md:h-[430px] lg:w-[400px] lg:h-[430px] bg-[#00E6F6] lg:mt-11 mx-auto outline outline-offset-4 border-4 border-[#00E6F6] hexagon-toggle animate-slowBounce ">
                     <img src="assets/me.jpeg" alt="Profile">
@@ -133,19 +144,23 @@
         </div>
     </div>
 
-    <div id="about" class="w-full h-[480px]  border-t border-[#00E6F6] py-3 overflow-hidden">
+    <div id="about" class="w-full h-[480px]  border-t border-[#00E6F6] py-3 overflow-hidden border-group">
         <p class="text-center text-[#00E6F6] lg:text-[30px] md:text-[24px] sm:text-[18px] mt-6 font-bold font-roboto heading-title">About Me</p>
 
         <div class="w-full lg:flex md:flex h-full">
 
-            <div class="lg:w-[50%] md:w-[50%] sm:w-full">
+            <div data-aos="fade-down"
+                 data-aos-duration="1500"
+                 data-aos-delay="100" class="lg:w-[50%] md:w-[50%] sm:w-full">
                 <div
                     class="hexagon-2 sm:w-[200px] sm:h-[230px] md:w-[300px] md:h-[330px] lg:w-[300px] lg:h-[330px] bg-[#00E6F6]  mx-auto outline outline-offset-4 border-4 border-[#00E6F6] hexagon-toggle  ">
                     <img src="assets/me.jpeg" alt="Profile">
                 </div>
             </div>
 
-            <div class="lg:w-[50%] md:w-[50%] sm:w-full px-5">
+            <div data-aos="fade-left"
+                 data-aos-duration="1500"
+                 data-aos-delay="800" class="lg:w-[50%] md:w-[50%] sm:w-full px-5">
                 <p class="mt-8 text-content text-white lg:text-[18px] sm:text-[12px] md:text-[16px] font-roboto font-normal">Hello! My name is Muhamad Arif, and I am currently in my final year of university. 
                     I am passionate about technology, particularly web development, and have been honing my skills in 
                     building dynamic and responsive websites. As a student, I enjoy exploring new technologies, solving 
@@ -157,7 +172,7 @@
         </div>
     </div>
 
-    <div id="skill" class="w-full lg:h-[680px]  border-t border-[#00E6F6] py-3 overflow-hidden relative">
+    <div id="skill" class="w-full lg:h-[680px]  border-t border-[#00E6F6] py-3 overflow-hidden border-group relative">
         <p class="text-center text-[#00E6F6] lg:text-[30px] md:text-[24px] sm:text-[18px] mt-6 font-roboto font-bold heading-title">My Skill</p>
         <!-- row pertama -->
         
@@ -243,11 +258,11 @@
 
             <div class="card3 card-item sm:w-[200px] sm:h-[85px] lg:w-[300px] lg:h-[120px] md:w-[250px] md:h-[100px] rounded-xl bg-[#00E6F6] md:flex lg:flex shadow-lg shadow-[#00E6F6] lg:mr-3 md:mr-3 sm:mr-3">
                 <div class="lg:w-[50%] md:w-[40%] pl-3">
-                    <img src="assets/java.png" alt="" class="lg:w-[90px] lg:h-[90px] md:w-[70px] md:h-[70px] sm:h-[40px] sm:ml-1 md:ml-0 lg:ml-0 lg:mt-3 md:mt-2 ">
+                    <img src="assets/reactJs.png" alt="" class="lg:w-[90px] lg:h-[90px] md:w-[70px] md:h-[70px] sm:h-[40px] sm:ml-1 md:ml-0 lg:ml-0 lg:mt-3 md:mt-2 ">
                 </div>
                 <div class="w-[50%]">
-                    <h1 class="text-content text-white font-bold text-center  lg:text-[30px] sm:ml-2 md:ml-0 lg:ml-0 sm:mt-3 lg:mt-4 md:mt-4 md:text-[20px]">JAVA</h1>
-                    <p class="text-content text-white font-semi-bold lg:text-[10px] md:block lg:block sm:hidden text-center md:text-[10px]">Programing Language</p>
+                    <h1 class="text-content text-white font-bold text-center  lg:text-[30px] sm:ml-2 md:ml-0 lg:ml-0 sm:mt-3 lg:mt-4 md:mt-4 md:text-[20px]">ReactJs</h1>
+                    <p class="text-content text-white font-semi-bold lg:text-[10px] md:block lg:block sm:hidden text-center md:text-[10px]">JavaScript Library</p>
                 </div>
             </div>
 
@@ -290,11 +305,11 @@
 
             <div class="card2 card-item sm:w-[200px] sm:h-[85px] lg:w-[300px] lg:h-[120px] md:w-[250px] md:h-[100px] rounded-xl bg-[#00E6F6] lg:flex md:flex shadow-lg shadow-[#00E6F6] lg:mr-3 md:mr-3 sm:mr-3">
                 <div class="lg:w-[50%] md:w-[40%] pl-3">
-                    <img src="assets/codeIgnator.png" alt="" class="lg:w-[90px] lg:h-[90px] md:w-[70px] md:h-[70px] sm:h-[40px] sm:ml-2 md:ml-0 lg:ml-0 mt-3">
+                    <img src="assets/postgresSQL.png" alt="" class="lg:w-[90px] lg:h-[90px] md:w-[70px] md:h-[70px] sm:h-[40px] sm:ml-2 md:ml-0 lg:ml-0 mt-3">
                 </div>
                 <div class="w-[50%]">
-                    <h1 class="text-content text-white font-bold lg:text-[20px] mt-4 md:text-[18px] sm:ml-1 sm:mt-1 md:ml-0 lg:ml-0 lg:mt-4 md:mt-4 sm:text-[10px]">CodeIgnitor3</h1>
-                    <p class="text-content text-white font-semi-bold lg:text-[10px] md:block lg:block sm:hidden text-center md:text-[11px]">PHP Framework</p>
+                    <h1 class="text-content text-white font-bold lg:text-[20px] mt-4 md:text-[18px] sm:ml-1 sm:mt-1 md:ml-0 lg:ml-0 lg:mt-4 md:mt-4 sm:text-[10px]">PostgresSQL</h1>
+                    <p class="text-content text-white font-semi-bold lg:text-[10px] md:block lg:block sm:hidden text-center md:text-[11px]">Database</p>
                 </div>
             </div>
 
@@ -302,11 +317,13 @@
         <!-- batas row ketiga -->
     </div>
 
-    <div id="skill" class="w-full  lg:h-[620px]  border-t border-[#00E6F6] py-3 px-3 overflow-x-hidden">
+    <div id="skill" class="w-full  lg:h-[620px]  border-t border-[#00E6F6] py-3 px-3 overflow-x-hidden border-group">
         <p class="text-center text-[#00E6F6] lg:text-[30px] mt-6 font-roboto md:text-[24px] sm:text-[18px] font-bold heading-title">I Can Do</p>
 
         <div class="flex sm:flex-wrap lg:justify-between w-full">
-            <div class="card-bg lg:w-[32%] md:w-[32%] lg:h-[480px] md:h-[400px] sm:h-[350px]  bg-[#1E1E1E] rounded-xl lg:my-auto lg:mr-3 lg:mt-3 md:my-auto md:mt-3 md:mr-3  sm:mb-3 overflow-hidden">
+            <div data-aos="fade-down"
+             data-aos-duration="800"
+             data-aos-delay="200" class="card-bg lg:w-[32%] md:w-[32%] lg:h-[480px] md:h-[400px] sm:h-[350px]  bg-[#1E1E1E] rounded-xl lg:my-auto lg:mr-3 lg:mt-3 md:my-auto md:mt-3 md:mr-3  sm:mb-3 overflow-hidden">
                 <div class="w-full lg:h-[80px] bg-[#00E6F6] card-item py-4">
                     <p class="text-white lg:text-[24px] md:text-[20px] text-center font-bold">Frontend Web</p>
                 </div>
@@ -317,7 +334,9 @@
 
             </div>
 
-            <div class="card-bg lg:w-[32%] md:w-[32%] lg:h-[480px] md:h-[400px] sm:h-[350px] bg-[#1E1E1E] rounded-xl lg:my-auto lg:mr-3 lg:mt-3 md:my-auto md:mt-3 md:mr-3  sm:mb-3 overflow-hidden">
+            <div data-aos="fade-up"
+             data-aos-duration="1600"
+             data-aos-delay="700" class="card-bg lg:w-[32%] md:w-[32%] lg:h-[480px] md:h-[400px] sm:h-[350px] bg-[#1E1E1E] rounded-xl lg:my-auto lg:mr-3 lg:mt-3 md:my-auto md:mt-3 md:mr-3  sm:mb-3 overflow-hidden">
                 <div class="w-full lg:h-[80px] bg-[#00E6F6] py-4 card-item">
                     <p class="text-white lg:text-[24px] md:text-[20px] text-center font-bold">Web Development</p>
                 </div>
@@ -325,7 +344,9 @@
                 </p>
             </div>
 
-            <div class="card-bg lg:w-[32%] md:w-[32%] lg:h-[480px] md:h-[400px] sm:h-[350px] bg-[#1E1E1E] rounded-xl lg:my-auto lg:mr-3 lg:mt-3 md:my-auto md:mt-3   sm:mb-3 overflow-hidden">
+            <div data-aos="fade-down"
+             data-aos-duration="3200"
+             data-aos-delay="1500" class="card-bg lg:w-[32%] md:w-[32%] lg:h-[480px] md:h-[400px] sm:h-[350px] bg-[#1E1E1E] rounded-xl lg:my-auto lg:mr-3 lg:mt-3 md:my-auto md:mt-3   sm:mb-3 overflow-hidden">
                 <div class="w-full lg:h-[80px] bg-[#00E6F6] card-item py-4">
                     <p class="text-white lg:text-[24px] md:text-[20px] text-center font-bold">Backend</p>
                 </div>
@@ -335,13 +356,58 @@
         </div>
     </div>
 
-    <div id="portfolio" class="w-full lg:h-[880px]  border-t border-[#00E6F6] py-3 overflow-x-hidden">
+    <div id="portfolio" class="w-full lg:h-auto mb-12  border-t border-[#00E6F6] py-3 overflow-x-hidden border-group">
         <p class="text-center text-[#00E6F6] lg:text-[30px] md:text-[24px] mt-6 font-roboto font-bold heading-title">Portofolio</p>
 
-        <div  class="lg:w-[90%] md:w-[90%] sm:w-[100%] flex justify-center px-3 mt-5 mx-auto">
+        <div  class="lg:w-[100%] md:w-[90%] sm:w-[100%] flex sm:flex-wrap lg:flex-wrap gap-8 justify-center px-3 mt-5 mx-auto">
 
-            <div class="card-bg  hover:shadow-lg transition sm:w-[450px] sm:h-[300px] lg:w-[400px] md:w-[350px] md:h-[500px] lg:h-[550px] bg-[#1E1E1E] rounded-xl g:px-5 lg:py-5 md:py-5 md:px-5 sm:px-2 sm:py-2 mr-5 overflow-hidden">
-                <img src="assets/panser/pesanan.png" alt="" class="rounded-xl w-full lg:h-[260px] md:h-[230px] sm:h-[100px] border-4 border-[#00E6F6] toggle-border">
+            <div data-aos="fade-right"
+             data-aos-duration="800"
+             data-aos-delay="200" class="card-bg sm:mx-auto md:mx-0 lg:mx-0  hover:shadow-lg transition sm:w-[450px] sm:h-[400px] lg:w-[360px] md:w-[350px] md:h-[500px] lg:h-[550px] bg-[#1E1E1E] rounded-xl g:px-5 lg:py-5 md:py-5 md:px-5 sm:px-2 sm:py-2 mr-5 overflow-hidden flex flex-col justify-center items-center">
+                <img src="assets/smaPGRI.png" alt="" class="rounded-xl w-full lg:h-[260px] md:h-[230px] sm:h-[200px] border-4 border-[#00E6F6] toggle-border">
+                
+                <h1 class="font-bold text-[#00E6F6] mt-6 lg:text-[20px] md:text-[18px] sm:text-[12px] heading-title">Profile School Management</h1>
+
+                <div class="w-full lg:px-3 md:px3 sm:px-1 lg:h-[100px] md:h-[97px] sm:h-[50px] overflow-scroll">
+                    <p class="text-content text-white lg:text-[20px] md:text-[16px] sm:text-[12px]">I developed the official website for SMA PGRI Sindangsono using Laravel. The platform provides school information, news, activities, announcements, and admission (PPDB) features with a clean, responsive, and user-friendly interface.</p>
+                </div>
+
+                <button id="smaPGRI" class="sm:w-[160px] btn-card-hover sm:h-[40px]  sm:mt-6 sm:mx-auto sm:text-[12px] md:text-[18px] lg:text-[20px] transition hover:bg-[#00E6F6] hover:text-white font-bold lg:w-[300px] lg:h-[50px] md:w-[305px] md:h-[50px] px-5 rounded-xl   border-2 border-[#00E6F6] text-[#00E6F6] mt-7">View Detail</button>
+
+            </div>
+            <div data-aos="fade-right"
+             data-aos-duration="800"
+             data-aos-delay="200" class="card-bg sm:mx-auto md:mx-0 lg:mx-0  hover:shadow-lg transition sm:w-[450px] sm:h-[400px] lg:w-[360px] md:w-[350px] md:h-[500px] lg:h-[550px] bg-[#1E1E1E] rounded-xl g:px-5 lg:py-5 md:py-5 md:px-5 sm:px-2 sm:py-2 mr-5 overflow-hidden flex flex-col justify-center items-center">
+                <img src="assets/desaDigital.png" alt="" class="rounded-xl w-full lg:h-[260px] md:h-[230px] sm:h-[200px] border-4 border-[#00E6F6] toggle-border">
+                
+                <h1 class="font-bold text-[#00E6F6] mt-6 lg:text-[20px] md:text-[18px] sm:text-[12px] heading-title">Village Management System</h1>
+
+                <div class="w-full lg:px-3 md:px3 sm:px-1 lg:h-[100px] md:h-[97px] sm:h-[50px] overflow-scroll">
+                    <p class="text-content text-white lg:text-[20px] md:text-[16px] sm:text-[12px]">I built the full dashboard system for DesaKita, a web-based village administration and citizen management platform. The project includes a role-based login system, social assistance management, demographic statistics, household data, events, population charts, and other administrative modules.
+Developed using Laravel for the backend API and Vue.js for the frontend, the platform delivers a seamless, responsive, and modern user experience</p>
+                </div>
+
+                <button class="sm:w-[160px] btn-card-hover sm:h-[40px]  sm:mt-6 sm:mx-auto sm:text-[12px] md:text-[18px] lg:text-[20px] transition hover:bg-[#00E6F6] hover:text-white font-bold lg:w-[300px] lg:h-[50px] md:w-[305px] md:h-[50px] px-5 rounded-xl   border-2 border-[#00E6F6] text-[#00E6F6] mt-7">View Detail</button>
+
+            </div>
+            <div data-aos="fade-right"
+             data-aos-duration="800"
+             data-aos-delay="200" class="card-bg sm:mx-auto md:mx-0 lg:mx-0  hover:shadow-lg transition sm:w-[450px] sm:h-[400px] lg:w-[360px] md:w-[350px] md:h-[500px] lg:h-[550px] bg-[#1E1E1E] rounded-xl g:px-5 lg:py-5 md:py-5 md:px-5 sm:px-2 sm:py-2 mr-5 overflow-hidden flex flex-col justify-center items-center">
+                <img src="assets/bookShop.png" alt="" class="rounded-xl w-full lg:h-[260px] md:h-[230px] sm:h-[200px] border-4 border-[#00E6F6] toggle-border">
+                
+                <h1 class="font-bold text-[#00E6F6] mt-6 lg:text-[20px] md:text-[18px] sm:text-[12px] heading-title">BookStore</h1>
+
+                <div class="w-full lg:px-3 md:px3 sm:px-1 lg:h-[100px] md:h-[97px] sm:h-[50px] overflow-scroll">
+                    <p class="text-content text-white lg:text-[20px] md:text-[16px] sm:text-[12px]">I developed a simple and modern online bookstore website using Laravel. The platform allows users to browse books, explore categories, and navigate through a clean and responsive interface.</p>
+                </div>
+
+                <button id="bookStore" class="sm:w-[160px] btn-card-hover sm:h-[40px]  sm:mt-6 sm:mx-auto sm:text-[12px] md:text-[18px] lg:text-[20px] transition hover:bg-[#00E6F6] hover:text-white font-bold lg:w-[300px] lg:h-[50px] md:w-[305px] md:h-[50px] px-5 rounded-xl   border-2 border-[#00E6F6] text-[#00E6F6] mt-7">View Detail</button>
+
+            </div>
+            <div data-aos="fade-right"
+             data-aos-duration="800"
+             data-aos-delay="200" class="card-bg sm:mx-auto md:mx-0 lg:mx-0 hover:shadow-lg transition sm:w-[450px] sm:h-[400px] lg:w-[360px] md:w-[350px] md:h-[500px] lg:h-[550px] bg-[#1E1E1E] rounded-xl g:px-5 lg:py-5 md:py-5 md:px-5 sm:px-2 sm:py-2 mr-5 overflow-hidden flex flex-col justify-center items-center">
+                <img src="assets/panser/pesanan.png" alt="" class="rounded-xl w-full lg:h-[260px] md:h-[230px] sm:h-[200px] border-4 border-[#00E6F6] toggle-border">
                 
                 <h1 class="font-bold text-[#00E6F6] mt-6 lg:text-[20px] md:text-[18px] sm:text-[12px] heading-title">Mobile E-commerce Management</h1>
 
@@ -349,58 +415,59 @@
                     <p class="text-content text-white lg:text-[20px] md:text-[16px] sm:text-[12px]">I developed a comprehensive admin panel for a mobile e-commerce application to streamline backend operations. This system enables administrators to efficiently manage products, orders, categories, drivers, and shipping rates. Key features include adding, editing, and deleting products, categories, and drivers; processing and confirming customer orders; and managing delivery tariffs. The panel was built with Vue.js and integrated with a RESTful API for seamless communication with the backend. This project highlights my ability to design and implement scalable, user-friendly admin solutions for e-commerce platforms.</p>
                 </div>
 
-                <button class="sm:w-[160px] btn-card-hover sm:h-[40px]  sm:mt-6 sm:mx-auto sm:text-[12px] md:text-[18px] lg:text-[20px] transition hover:bg-[#00E6F6] hover:text-white font-bold lg:w-[365px] lg:h-[50px] md:w-[305px] md:h-[50px] px-5 rounded-xl   border-2 border-[#00E6F6] text-[#00E6F6] mt-7">View Detail</button>
+                <button class="sm:w-[160px] btn-card-hover sm:h-[40px]  sm:mt-6 sm:mx-auto sm:text-[12px] md:text-[18px] lg:text-[20px] transition hover:bg-[#00E6F6] hover:text-white font-bold lg:w-[300px] lg:h-[50px] md:w-[305px] md:h-[50px] px-5 rounded-xl   border-2 border-[#00E6F6] text-[#00E6F6] mt-7">View Detail</button>
 
             </div>
-
-            <div class="card-bg  hover:shadow-lg transition sm:w-[450px] sm:h-[300px] lg:w-[400px] lg:h-[550px] md:w-[350px] md:h-[500px] bg-[#1E1E1E] lg:px-5 lg:py-5 md:py-5 md:px-5 sm:px-2 sm:py-2 rounded-xl overflow-hidden ">
-                <img src="assets/barang/barang.png" alt="" class="rounded-xl lg:h-[260px] md:h-[230px] sm:h-[100px] w-full border-4 border-[#00E6F6] toggle-border">
+            <div data-aos="fade-right"
+             data-aos-duration="800"
+             data-aos-delay="200" class="card-bg sm:mx-auto md:mx-0 lg:mx-0 hover:shadow-lg transition sm:w-[450px] sm:h-[400px] lg:w-[360px] md:w-[350px] md:h-[500px] lg:h-[550px] bg-[#1E1E1E] rounded-xl g:px-5 lg:py-5 md:py-5 md:px-5 sm:px-2 sm:py-2 mr-5 overflow-hidden flex flex-col justify-center items-center">
+                <img src="assets/barang/barang.png" alt="" class="rounded-xl w-full lg:h-[260px] md:h-[230px] sm:h-[200px] border-4 border-[#00E6F6] toggle-border">
                 
-                <h1 class="font-bold text-[#00E6F6] mt-6 lg:text-[20px] md:text-[18px] heading-title">Iventory</h1>
+                <h1 class="font-bold text-[#00E6F6] mt-6 lg:text-[20px] md:text-[18px] sm:text-[12px] heading-title">Iventory</h1>
 
-                <div class="w-full lg:px-3 md:px-3 sm:px1 lg:h-[100px] md:h-[97px] sm:h-[60px] overflow-y-scroll">
+                <div class="w-full lg:px-3 md:px3 sm:px-1 lg:h-[100px] md:h-[97px] sm:h-[50px] overflow-scroll">
                     <p class="text-content text-white lg:text-[20px] md:text-[16px] sm:text-[12px]">I created an inventory management system that simplifies the tracking of product stock and outgoing items. The system allows administrators to efficiently add, update, and delete products, as well as monitor product outflows. It also includes a comprehensive reporting feature to generate detailed reports on outgoing items, providing insights into inventory usage and trends. This project showcases my expertise in developing systems for inventory tracking and reporting, ensuring streamlined operations and accurate data management.</p>
                 </div>
 
-                <button id="show2" class="btn-card-hover sm:w-[160px] sm:h-[40px]   sm:mt-6 sm:text-[12px] md:text-[18px] lg:text-[20px] transition  hover:bg-[#00E6F6] hover:text-white font-bold lg:w-[365px] lg:h-[50px] md:w-[305px]  md:h-[50px] px-5 rounded-xl  border-2 border-[#00E6F6] text-[#00E6F6] lg:mt-7 md:mt-6">View Detail</button>
-
+                <button id="barang" class="sm:w-[160px] btn-card-hover sm:h-[40px]  sm:mt-6 sm:mx-auto sm:text-[12px] md:text-[18px] lg:text-[20px] transition hover:bg-[#00E6F6] hover:text-white font-bold lg:w-[300px] lg:h-[50px] md:w-[305px] md:h-[50px] px-5 rounded-xl   border-2 border-[#00E6F6] text-[#00E6F6] mt-7">View Detail</button>
 
             </div>
+           
         </div>
 
     </div>
 
 
-    <div id="contact" class="flex w-full sm:h-[160px] lg:h-[180px] md:h-[160px] bg-[#0D1117] border-t border-[#00E6F6] py-3 overflow-x-hidden">
+    <div id="contact" class="border-footer nav-foot-bg flex w-full sm:h-[160px] lg:h-[180px] md:h-[160px] bg-[#0D1117] border-t border-[#00E6F6] py-3 overflow-x-hidden">
 
         <div class="w-[4%] flex-col justify-end px-5">
-            <div class="linkedin hover:border-white hover:bg-[#00E6F6] group lg:w-[40px] lg:h-[40px] md:w-[35px] md:h-[35px] sm:w-[30px] sm:h-[30px] rounded-full border-2 border-[#00E6F6] mr-4 cursor-pointer mb-2">
-                <i class="fa-brands group-hover:text-white sm:ml-[6px] sm:mt-[4px] fa-linkedin-in text-[#00E6F6] lg:ml-[10px] mt-[10px] md:ml-[8px] md:mt-[8px] lg:text-[18px]"></i>
+            <div class="icon-toggle linkedin hover:border-white hover:bg-[#00E6F6] group lg:w-[40px] lg:h-[40px] md:w-[35px] md:h-[35px] sm:w-[30px] sm:h-[30px] rounded-full border-2 border-[#00E6F6] mr-4 cursor-pointer mb-2">
+                <i class="icon-toggle fa-brands group-hover:text-white sm:ml-[6px] sm:mt-[4px] fa-linkedin-in text-[#00E6F6] lg:ml-[10px] mt-[10px] md:ml-[8px] md:mt-[8px] lg:text-[18px]"></i>
             </div>
-            <div class="instagram hover:border-white hover:bg-[#00E6F6] group lg:w-[40px] lg:h-[40px] md:w-[35px] md:h-[35px] sm:w-[30px] sm:h-[30px] rounded-full border-2 border-[#00E6F6] mr-4 cursor-pointer mb-2">
-                <i class="fa-brands sm:ml-[6px] group-hover:text-white fa-instagram text-[#00E6F6] lg:ml-[10px] lg:mt-[10px] md:ml-[8px] md:mt-[8px] lg:text-[18px]"></i>
+            <div class="icon-toggle instagram hover:border-white hover:bg-[#00E6F6] group lg:w-[40px] lg:h-[40px] md:w-[35px] md:h-[35px] sm:w-[30px] sm:h-[30px] rounded-full border-2 border-[#00E6F6] mr-4 cursor-pointer mb-2">
+                <i class="icon-toggle fa-brands sm:ml-[6px] group-hover:text-white fa-instagram text-[#00E6F6] lg:ml-[10px] lg:mt-[10px] md:ml-[8px] md:mt-[8px] lg:text-[18px]"></i>
             </div>
-            <div class="whatapp hover:border-white hover:bg-[#00E6F6] group lg:w-[40px] lg:h-[40px] md:w-[35px] md:h-[35px] sm:w-[30px] sm:h-[30px] rounded-full border-2 border-[#00E6F6] cursor-pointer">
-                <i class="fa-brands sm:ml-[6px] group-hover:text-white fa-whatsapp text-[#00E6F6] lg:ml-[10px] md:ml-[8px] md:mt-[8px] lg:mt-[10px] lg:text-[18px]"></i>
+            <div class="icon-toggle whatapp hover:border-white hover:bg-[#00E6F6] group lg:w-[40px] lg:h-[40px] md:w-[35px] md:h-[35px] sm:w-[30px] sm:h-[30px] rounded-full border-2 border-[#00E6F6] cursor-pointer">
+                <i class="icon-toggle fa-brands sm:ml-[6px] group-hover:text-white fa-whatsapp text-[#00E6F6] lg:ml-[10px] md:ml-[8px] md:mt-[8px] lg:mt-[10px] lg:text-[18px]"></i>
             </div>
         </div>
 
         <div class="lg:w-[40%] md:w-[30%] sm:w-[40%] flex-col justify-end px-5">
-            <p class="text-[#00E6F6] lg:text-[20px] md:text-[18px] font-semi-bold sm:text-[11px] lg:mt-0 md:mt-0 sm:mt-2">Muhamad Arif</p>
-            <p class="text-[#00E6F6] lg:text-[20px] md:text-[18px] font-semi-bold sm:text-[11px] lg:mt-5 md:mt-5 sm:mt-5">a_riifff</p>
-            <p class="text-[#00E6F6] lg:text-[20px] md:text-[18px] font-semi-bold sm:text-[11px] lg:mt-5 md:mt-5 sm:mt-5">+62 878-8078-5245</p>
+            <p class="text-[#00E6F6] foot-item lg:text-[20px] md:text-[18px] font-semi-bold sm:text-[11px] lg:mt-0 md:mt-0 sm:mt-2">Muhamad Arif</p>
+            <p class="text-[#00E6F6] foot-item lg:text-[20px] md:text-[18px] font-semi-bold sm:text-[11px] lg:mt-5 md:mt-5 sm:mt-5">a_riifff</p>
+            <p class="text-[#00E6F6] foot-item lg:text-[20px] md:text-[18px] font-semi-bold sm:text-[11px] lg:mt-5 md:mt-5 sm:mt-5">+62 878-8078-5245</p>
         </div>
 
         <div class="lg:w-[34%] md:w-[39%] sm:w-[40%] my-auto">
-            <p class="text-[#00E6F6] lg:text-[18px] md:text-[18px] sm:text-[11px] font-semi-bold">Copyright &#169; <span id="year">2024</span> Muhamad Arif</p>
+            <p class="text-[#00E6F6] foot-item lg:text-[18px] md:text-[18px] sm:text-[11px] font-semi-bold">Copyright &#169; <span id="year">2024</span> Muhamad Arif</p>
            
             
         </div>
 
         <div class="w-20%">
-            <p class="text-[#00E6F6] lg:text-[20px] md:text-[18px] sm:text-[11px] font-bold">Muhamad Arif</p>
-            <i class="fa-solid fa-location-dot text-[#00E6F6] mt-6"></i><span class="text-[#00E6F6] lg:text-[20px] md:text-[18px] sm:text-[11px] ml-3">Tangerang City, Indonesian</span>
-            <p class="text-[#00E6F6] lg:text-[20px]  md:text-[18px] sm:text-[11px] font-thin mt-5">Muhmdarif3@gmail.com</p>
+            <p class="text-[#00E6F6] foot-item lg:text-[20px] md:text-[18px] sm:text-[11px] font-bold">Muhamad Arif</p>
+            <i class="icon-toggle fa-solid fa-location-dot text-[#00E6F6] mt-6"></i><span class="text-[#00E6F6] foot-item lg:text-[20px] md:text-[18px] sm:text-[11px] ml-3">Tangerang City, Indonesian</span>
+            <p class="text-[#00E6F6] foot-item lg:text-[20px]  md:text-[18px] sm:text-[11px] font-thin mt-5">Muhmdarif3@gmail.com</p>
         </div>
         
 
@@ -408,6 +475,10 @@
 
 
     <script src="js/main.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 

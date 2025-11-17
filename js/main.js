@@ -67,18 +67,28 @@ linkContact.addEventListener('click', () => {
 })
 
 
-let buttonDetail2 = document.getElementById('show2')
+let barang = document.getElementById('barang')
+let bookStore = document.getElementById('bookStore')
 let instagram = document.querySelector('.instagram')
 let linkedin = document.querySelector('.linkedin')
 let whatsApp = document.querySelector('.whatapp')
+let smaPgri = document.getElementById('smaPGRI')
 
 
-buttonDetail2.addEventListener("click", () => {
+barang.addEventListener("click", () => {
   window.open("https://github.com/tophBey/barang", "_blank");
+});
+
+ bookStore.addEventListener("click", () => {
+  window.open("https://github.com/tophBey/bookStore", "_blank");
 });
 
 instagram.addEventListener("click", () => {
   window.open("https://www.instagram.com/a_riifff/", "_blank");
+});
+
+smaPgri.addEventListener("click", () => {
+  window.open("https://smapgri-sindangsono.sch.id/", "_blank");
 });
 
 linkedin.addEventListener("click", () => {
@@ -88,7 +98,7 @@ linkedin.addEventListener("click", () => {
 whatsApp.addEventListener("click", () => {
 
   const phoneNumber = "6287880785245";
-        const message = encodeURIComponent("Halo, saya tertarik untuk berbicara dengan Anda");
+        const message = encodeURIComponent("Halo, saya ingin menghubungi Anda melalui WhatsApp.");
         const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
         
         
@@ -199,6 +209,7 @@ let yearSpan = document.getElementById('year');
 let btnBanner = document.getElementById('btn-banner');
 let currentYear = new Date().getFullYear();
 let contentToggle = document.getElementById('contentToggle');
+let contentToggle2 = document.getElementById('contentToggle2');
 let cardBg = document.querySelectorAll('.card-bg');
 let headingTitle = document.querySelectorAll('.heading-title');
 let cardItem = document.querySelectorAll('.card-item');
@@ -206,12 +217,44 @@ let btnCardHover = document.querySelectorAll('.btn-card-hover');
 let borderToggle = document.querySelectorAll('.toggle-border');
 let hexagonToggle = document.querySelectorAll('.hexagon-toggle');
 let iconToggle = document.querySelectorAll('.icon-toggle');
+let navFootBg = document.querySelectorAll('.nav-foot-bg');
+let logo = document.getElementById('logo');
+let navItem = document.querySelectorAll('.nav-item');
+let footItem = document.querySelectorAll('.foot-item');
+let borderGroup = document.querySelectorAll('.border-group');
+let borderFooter = document.querySelector('.border-footer');
 // bg-[#1E1E1E]
 
 function applyTheme(isDark) {
-  contentToggle.textContent = isDark ? '☀️' : '🌔';
+  if(contentToggle2){
+    contentToggle2.textContent = isDark ? '☀️' : '🌔';
+  }
+  
+  if(contentToggle){
+    contentToggle.textContent = isDark ? '☀️' : '🌔';
+  }
 
   container.classList.toggle('bg-[#0D1117]');
+  logo.classList.toggle('bg-[#00E6F6]');
+  logo.classList.toggle('bg-yellow-400');
+
+  borderGroup.forEach((el) => {
+    el.classList.toggle('border-[#00E6F6]');
+    el.classList.toggle('border-yellow-400');
+  })
+
+  borderFooter.classList.toggle('border-t');
+  borderFooter.classList.toggle('border-[#00E6F6]');
+  borderFooter.classList.toggle('border-t-yellow-400');
+
+  navItem.forEach((el) => {
+    el.classList.toggle('lg:hover:bg-[#0D1117]');
+    el.classList.toggle('sm:hover:bg-[#00E6F6]');
+    el.classList.toggle('sm:hover:bg-yellow-400');
+    el.classList.toggle('md:hover:bg-[#0D1117]');
+    el.classList.toggle('lg:hover:bg-gray-100');
+    el.classList.toggle('lg:hover:text-yellow-500');
+  })
 
   btnBanner.classList.toggle('bg-[#00E6F6]');
   btnBanner.classList.toggle('border-[#00E6F6]');
@@ -231,10 +274,20 @@ function applyTheme(isDark) {
     el.classList.toggle('hover:bg-yellow-400');
   });
 
+  navFootBg.forEach((el) => {
+    el.classList.toggle('bg-[#0D1117]');
+    el.classList.toggle('text-white');
+    el.classList.toggle('border-[#00E6F6]');
+    el.classList.toggle('border-yellow-400');  
+    el.classList.toggle('bg-gray-100');
+    el.classList.toggle('text-black');
+  });
+
   texts.forEach((el) => el.classList.toggle('text-white'));
 
   cardBg.forEach((el) => {
     el.classList.toggle('bg-[#1E1E1E]');
+   
     el.classList.toggle('bg-gray-100');
   });
 
@@ -252,16 +305,19 @@ function applyTheme(isDark) {
 
   cardItem.forEach((el) => {
     el.classList.toggle('bg-[#00E6F6]');
+     el.classList.toggle('shadow-[#00E6F6]');
+    el.classList.toggle('shadow-yellow-400');
     el.classList.toggle('bg-yellow-400');
   });
 
   btnCardHover.forEach((el) => {
     el.classList.toggle('hover:bg-[#00E6F6]');
+    el.classList.toggle('shadow-lg');
+    el.classList.toggle('hover:shadow-[#00E6F6]');
     el.classList.toggle('border-[#00E6F6]');
     el.classList.toggle('text-yellow-400');
     el.classList.toggle('hover:bg-yellow-500');
     el.classList.toggle('border-yellow-400');
-    el.classList.toggle('shadow-lg');
     el.classList.toggle('hover:shadow-yellow-400');
   });
 
@@ -269,6 +325,11 @@ function applyTheme(isDark) {
     el.classList.toggle('border-[#00E6F6]');
     el.classList.toggle('border-yellow-400');
   });
+
+  footItem.forEach((el) => {
+    el.classList.toggle('text-[#00E6F6]');
+    el.classList.toggle('text-black');
+  })
 }
 
 
@@ -282,144 +343,9 @@ toggleChecked2.addEventListener('change', () => {
 
 
 
-// toggleChecked.addEventListener('change', () => {
-//   if (toggleChecked.checked) {
 
-//     contentToggle.textContent = '☀️';
-//     container.classList.toggle('bg-[#0D1117]');
-
-
-//     btnBanner.classList.toggle('bg-[#00E6F6]');
-//     btnBanner.classList.toggle('border-[#00E6F6]');
-//     btnBanner.classList.toggle('hover:bg-[#0D1117]');
-//     btnBanner.classList.toggle('bg-yellow-400');
-//     btnBanner.classList.toggle('shadow-[#00E6F6]');
-//     btnBanner.classList.toggle('shadow-yellow-400');
-//     btnBanner.classList.toggle('hover:border-yellow-600');
-//     btnBanner.classList.toggle('hover:bg-white');
-//     btnBanner.classList.toggle('hover:text-yellow-500');
-
-//     iconToggle.forEach((element) => {
-//       element.classList.toggle('text-[#00E6F6]');
-//       element.classList.toggle('border-[#00E6F6]');
-//       element.classList.toggle('text-yellow-400');
-//       element.classList.toggle('border-yellow-400');
-//       element.classList.toggle('hover:bg-yellow-400');
-
-//     })
-
-
-//     texts.forEach((element) => {
-//       element.classList.toggle('text-white');
-//     })
-
-
-//     cardBg.forEach((element) => {
-//       element.classList.toggle('bg-[#1E1E1E]');
-//       element.classList.toggle('bg-gray-100');
-//     })
-
-//     hexagonToggle.forEach((element) => {
-//       element.classList.toggle('bg-[#00E6F6]');
-//       element.classList.toggle('border-[#00E6F6]');
-//       element.classList.toggle('border-yellow-400');
-//       element.classList.toggle('bg-yellow-400');
-//     })
-
-//     headingTitle.forEach((element) => {
-//       element.classList.toggle('text-[#00E6F6]');
-//       element.classList.toggle('text-yellow-600');
-//     })
-
-//      cardItem.forEach((element) => {
-//       element.classList.toggle('bg-[#00E6F6]');
-//       element.classList.toggle('bg-yellow-400');
-//     })
-
-    
-    
-//     btnCardHover.forEach((element) => {
-      
-//       element.classList.toggle('hover:bg-[#00E6F6]');
-//       element.classList.toggle('border-[#00E6F6]');
-//       element.classList.toggle('text-yellow-400');
-//       element.classList.toggle('hover:bg-yellow-500');
-//       element.classList.toggle('border-yellow-400');
-//       element.classList.toggle('shadow-lg');
-//       element.classList.toggle('hover:shadow-yellow-400');
-      
-//     })
-//     borderToggle.forEach((element) => {
-//       element.classList.toggle('border-[#00E6F6]');
-//       element.classList.toggle('border-yellow-400');
-//     })
-//   }else {
-//     contentToggle.textContent = '🌔';
-//     container.classList.toggle('bg-[#0D1117]');
-
-//     btnBanner.classList.toggle('bg-[#00E6F6]');
-//     btnBanner.classList.toggle('border-[#00E6F6]');
-//     btnBanner.classList.toggle('hover:bg-[#0D1117]');
-//     btnBanner.classList.toggle('bg-yellow-400');
-//     btnBanner.classList.toggle('shadow-[#00E6F6]');
-//     btnBanner.classList.toggle('shadow-yellow-400');
-//     btnBanner.classList.toggle('hover:border-yellow-600');
-//     btnBanner.classList.toggle('hover:bg-white');
-//     btnBanner.classList.toggle('hover:text-yellow-500');
-
-//      iconToggle.forEach((element) => {
-//       element.classList.toggle('text-[#00E6F6]');
-//       element.classList.toggle('border-[#00E6F6]');
-//       element.classList.toggle('text-yellow-400');
-//       element.classList.toggle('border-yellow-400');
-//       element.classList.toggle('hover:bg-yellow-400');
-
-//     })
-
-//     texts.forEach((element) => {
-//       element.classList.toggle('text-white');
-//     })
-
-//      cardBg.forEach((element) => {
-//       element.classList.toggle('bg-[#1E1E1E]');
-//       element.classList.toggle('bg-gray-100');
-//     })
-
-//      headingTitle.forEach((element) => {
-//       element.classList.toggle('text-[#00E6F6]');
-//       element.classList.toggle('text-yellow-600');
-//     })
-
-//      cardItem.forEach((element) => {
-//       element.classList.toggle('bg-[#00E6F6]');
-//       element.classList.toggle('bg-yellow-400');
-//     })
-
-//      hexagonToggle.forEach((element) => {
-//       element.classList.toggle('bg-[#00E6F6]');
-//       element.classList.toggle('border-[#00E6F6]');
-//       element.classList.toggle('border-yellow-400');
-//       element.classList.toggle('bg-yellow-400');
-//     })
-
-//     btnCardHover.forEach((element) => {
-      
-//       element.classList.toggle('hover:bg-[#00E6F6]');
-//       element.classList.toggle('border-[#00E6F6]');
-//       element.classList.toggle('text-yellow-400');
-//       element.classList.toggle('hover:bg-yellow-500');
-//       element.classList.toggle('border-yellow-400');
-//       element.classList.toggle('shadow-lg');
-//       element.classList.toggle('hover:shadow-yellow-400');
-      
-//     })
-
-//      borderToggle.forEach((element) => {
-//       element.classList.toggle('border-[#00E6F6]');
-//       element.classList.toggle('border-yellow-400');
-//     })
-//   }
-// })
 yearSpan.textContent = currentYear; 
+
+
 
 
